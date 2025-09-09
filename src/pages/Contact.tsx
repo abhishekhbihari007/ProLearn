@@ -21,19 +21,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "support@prolearn.com",
+      value: "support@prolearn.in",
       action: "Send Email",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 98765 43210",
       action: "Call Now",
     },
     {
       icon: MapPin,
       title: "Office",
-      value: "123 Learning Street, Education City, EC 12345",
+      value: "Tech Park, Sector 5, Gurgaon, Haryana 122001",
       action: "Get Directions",
     },
   ];
@@ -59,7 +59,7 @@ const Contact = () => {
       <Navigation />
       <main>
         {/* Contact Section */}
-        <section className="py-20 bg-gradient-card">
+        <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get in Touch</h2>
@@ -75,8 +75,8 @@ const Contact = () => {
                   <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="bg-gradient-primary p-3 rounded-lg">
-                          <info.icon className="h-5 w-5 text-primary-foreground" />
+                        <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 rounded-lg">
+                          <info.icon className="h-5 w-5 text-white" />
                         </div>
                         <div className="flex-1">
                           <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
@@ -167,7 +167,7 @@ const Contact = () => {
             </div>
 
             {/* Feedback Section */}
-            <Card className="bg-gradient-primary text-primary-foreground">
+            <Card className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white">
               <CardContent className="p-8 text-center">
                 <MessageSquare className="h-12 w-12 mx-auto mb-4 opacity-90" />
                 <h3 className="text-2xl font-bold mb-4">We Value Your Feedback</h3>

@@ -21,7 +21,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/hero-bg.svg')",
+          backgroundImage: "url('/hero-bg-new.svg')",
         }}
       ></div>
       
@@ -42,30 +42,30 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-secondary-light/50 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-secondary-light/50 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
             <span className="w-2 h-2 bg-success rounded-full animate-pulse"></span>
             <span className="text-sm text-muted-foreground">New courses added weekly</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 leading-tight">
             Learn from the
-            <span className="block bg-gradient-primary bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
               Subject Matter Experts
             </span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-4 font-bold">
             Connect with subject matter experts and academics in cutting-edge fields. 
             Gain practical knowledge through hands-on demonstrations and real-world exercises.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Button variant="hero" size="lg" className="group">
               Start Learning Today
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

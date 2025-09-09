@@ -1,9 +1,10 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
-import { GraduationCap, Wrench, Users, Star } from "lucide-react";
+import { GraduationCap, Wrench, Users, Star, Quote, Award, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,46 +17,69 @@ const Home = () => {
         <section className="py-12 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="p-12 shadow-lg border-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 backdrop-blur-sm rounded-3xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-8">Featured Courses</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-8">Featured Certification Courses</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {/* Course 1 */}
                 <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Advanced React Development</h3>
-                  <p className="text-muted-foreground mb-4">Master modern React patterns, hooks, and performance optimization techniques.</p>
-                  <p className="text-primary font-medium mb-3">By John Smith</p>
+                  <h3 className="text-xl font-bold text-foreground mb-3">AI & Designing Technology</h3>
+                  <p className="text-muted-foreground mb-4">Apply AI to product, graphic, and UX/UI design processes. Master AI-powered design tools and automated layout generation.</p>
+                  <p className="text-primary font-medium mb-3">By Dr. Ananya Gupta</p>
                   <div className="flex items-center gap-1 mb-4">
                     <Star className="w-4 h-4 text-yellow-500 fill-current" />
                     <span className="text-foreground font-medium">4.9</span>
+                    <span className="text-sm text-muted-foreground ml-2">• Certification Course</span>
                   </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90">View Course</Button>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-2xl font-bold text-primary">₹4,999</span>
+                    <span className="text-sm text-muted-foreground">12 months</span>
+                  </div>
+                  <Link to="/courses">
+                    <Button className="w-full bg-primary hover:bg-primary/90">Get Certified</Button>
+                  </Link>
                 </Card>
 
                 {/* Course 2 */}
                 <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Data Science Fundamentals</h3>
-                  <p className="text-muted-foreground mb-4">Learn Python, statistics, and machine learning from industry experts.</p>
-                  <p className="text-primary font-medium mb-3">By Dr. Sarah Johnson</p>
+                  <h3 className="text-xl font-bold text-foreground mb-3">AI & Arts</h3>
+                  <p className="text-muted-foreground mb-4">Explore the intersection of artificial intelligence and creative arts. Master generative art algorithms and AI-assisted composition.</p>
+                  <p className="text-primary font-medium mb-3">By Vikram Singh</p>
                   <div className="flex items-center gap-1 mb-4">
                     <Star className="w-4 h-4 text-yellow-500 fill-current" />
                     <span className="text-foreground font-medium">4.8</span>
+                    <span className="text-sm text-muted-foreground ml-2">• Certification Course</span>
                   </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90">View Course</Button>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-2xl font-bold text-primary">₹4,999</span>
+                    <span className="text-sm text-muted-foreground">12 months</span>
+                  </div>
+                  <Link to="/courses">
+                    <Button className="w-full bg-primary hover:bg-primary/90">Get Certified</Button>
+                  </Link>
                 </Card>
 
                 {/* Course 3 */}
                 <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Digital Marketing Mastery</h3>
-                  <p className="text-muted-foreground mb-4">Comprehensive guide to modern digital marketing strategies and tools.</p>
-                  <p className="text-primary font-medium mb-3">By Mike Chen</p>
+                  <h3 className="text-xl font-bold text-foreground mb-3">AI & Business</h3>
+                  <p className="text-muted-foreground mb-4">Learn how to integrate AI into business strategies and operations. Master AI-driven decision making and automation.</p>
+                  <p className="text-primary font-medium mb-3">By Suresh Mehta</p>
                   <div className="flex items-center gap-1 mb-4">
                     <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                    <span className="text-foreground font-medium">4.7</span>
+                    <span className="text-foreground font-medium">4.8</span>
+                    <span className="text-sm text-muted-foreground ml-2">• Certification Course</span>
                   </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90">View Course</Button>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-2xl font-bold text-primary">₹4,999</span>
+                    <span className="text-sm text-muted-foreground">12 months</span>
+                  </div>
+                  <Link to="/courses">
+                    <Button className="w-full bg-primary hover:bg-primary/90">Get Certified</Button>
+                  </Link>
                 </Card>
               </div>
               <div className="text-center">
-                <Button className="bg-primary hover:bg-primary/90 px-8 py-3 text-lg">View All Courses</Button>
+                <Link to="/courses">
+                  <Button className="bg-primary hover:bg-primary/90 px-8 py-3 text-lg">View All Certification Courses</Button>
+                </Link>
               </div>
             </Card>
           </div>
@@ -71,22 +95,22 @@ const Home = () => {
                   <div className="mb-3">
                     <GraduationCap className="w-10 h-10 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Learn from the Best</h3>
-                  <p className="text-sm text-muted-foreground">Engage with subject matter experts and academics in cutting-edge fields. Our instructors are carefully selected experts with proven track records.</p>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Industry-Recognized Certifications</h3>
+                <p className="text-sm text-muted-foreground">All our courses lead to professional certifications that are recognized by top companies. Boost your career with verified credentials.</p>
                 </Card>
                 <Card className="p-6 shadow-lg flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
                   <div className="mb-3">
                     <Wrench className="w-10 h-10 text-secondary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Practical Knowledge</h3>
-                  <p className="text-sm text-muted-foreground">Gain hands-on experience through demonstrations and exercises. Learn by doing, not just reading theory.</p>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Certification-Focused Learning</h3>
+                <p className="text-sm text-muted-foreground">Our curriculum is designed specifically for certification success. Practice exams, real-world projects, and expert guidance ensure you pass with confidence.</p>
                 </Card>
                 <Card className="p-6 shadow-lg flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
                   <div className="mb-3">
                     <Users className="w-10 h-10 text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Join Our Community</h3>
-                  <p className="text-sm text-muted-foreground">Connect with like-minded individuals and expand your network. Build lasting professional relationships.</p>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Certified Professional Network</h3>
+                <p className="text-sm text-muted-foreground">Join thousands of certified professionals who have advanced their careers. Connect with certified peers and industry experts.</p>
                 </Card>
               </div>
             </Card>
@@ -114,6 +138,188 @@ const Home = () => {
                 <Card className="p-6 shadow-lg flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
                   <div className="text-3xl font-bold text-primary mb-1">95%</div>
                   <div className="text-sm text-muted-foreground">Completion Rate</div>
+                </Card>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-12 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Card className="p-12 shadow-lg border-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 backdrop-blur-sm rounded-3xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-8">What Our Students Say</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Testimonial 1 */}
+                <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-center mb-4">
+                    <Quote className="w-8 h-8 text-primary mr-2" />
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "ProLearn transformed my career! The React course was exceptional, and I landed my dream job as a frontend developer within 3 months."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                      P
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Priya Sharma</p>
+                      <p className="text-sm text-muted-foreground">Frontend Developer</p>
+                    </div>
+                  </div>
+                </Card>
+
+                {/* Testimonial 2 */}
+                <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-center mb-4">
+                    <Quote className="w-8 h-8 text-primary mr-2" />
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "The Data Science course exceeded my expectations. The instructors are industry experts who provide real-world insights and practical knowledge."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                      A
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Arjun Patel</p>
+                      <p className="text-sm text-muted-foreground">Data Scientist</p>
+                    </div>
+                  </div>
+                </Card>
+
+                {/* Testimonial 3 */}
+                <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-center mb-4">
+                    <Quote className="w-8 h-8 text-primary mr-2" />
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "Amazing learning experience! The community support and hands-on projects helped me master digital marketing and start my own agency."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                      R
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Rajesh Kumar</p>
+                      <p className="text-sm text-muted-foreground">Marketing Agency Owner</p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* Featured Instructors Section */}
+        <section className="py-12 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Card className="p-12 shadow-lg border-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 backdrop-blur-sm rounded-3xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-8">Meet Our Expert Instructors</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Instructor 1 */}
+                <Card className="p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full flex items-center justify-center text-black text-2xl font-bold mx-auto mb-4 border-2 border-blue-200">
+                    VS
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Vikram Singh</h3>
+                  <p className="text-primary font-medium mb-3">Senior React Developer</p>
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground ml-2">4.9 (2,340 students)</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    8+ years experience at Google, Facebook. Expert in React, Node.js, and modern web development.
+                  </p>
+                  <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
+                    <div className="flex items-center">
+                      <Award className="w-3 h-3 mr-1" />
+                      12 Courses
+                    </div>
+                    <div className="flex items-center">
+                      <BookOpen className="w-3 h-3 mr-1" />
+                      5 Years
+                    </div>
+                  </div>
+                </Card>
+
+                {/* Instructor 2 */}
+                <Card className="p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-green-100 to-blue-100 rounded-full flex items-center justify-center text-black text-2xl font-bold mx-auto mb-4 border-2 border-green-200">
+                    AG
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Dr. Ananya Gupta</h3>
+                  <p className="text-primary font-medium mb-3">Data Science Lead</p>
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground ml-2">4.8 (1,890 students)</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    PhD in Machine Learning, 10+ years at Microsoft. Specializes in Python, ML, and AI applications.
+                  </p>
+                  <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
+                    <div className="flex items-center">
+                      <Award className="w-3 h-3 mr-1" />
+                      8 Courses
+                    </div>
+                    <div className="flex items-center">
+                      <BookOpen className="w-3 h-3 mr-1" />
+                      6 Years
+                    </div>
+                  </div>
+                </Card>
+
+                {/* Instructor 3 */}
+                <Card className="p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full flex items-center justify-center text-black text-2xl font-bold mx-auto mb-4 border-2 border-purple-200">
+                    SM
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Suresh Mehta</h3>
+                  <p className="text-primary font-medium mb-3">Digital Marketing Expert</p>
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground ml-2">4.7 (1,650 students)</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Former Marketing Director at Apple. Expert in SEO, SEM, social media, and growth marketing strategies.
+                  </p>
+                  <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
+                    <div className="flex items-center">
+                      <Award className="w-3 h-3 mr-1" />
+                      6 Courses
+                    </div>
+                    <div className="flex items-center">
+                      <BookOpen className="w-3 h-3 mr-1" />
+                      4 Years
+                    </div>
+                  </div>
                 </Card>
               </div>
             </Card>

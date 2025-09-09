@@ -1,0 +1,89 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <linearGradient id="gradient2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.08" />
+      <stop offset="50%" style="stop-color:#00f2fe;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#43e97b;stop-opacity:0.08" />
+    </linearGradient>
+    
+    <radialGradient id="radial1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:0.05" />
+    </radialGradient>
+    
+    <!-- Pattern definitions -->
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.5" fill="#667eea" opacity="0.1"/>
+    </pattern>
+    
+    <pattern id="grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#764ba2" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#gradient1)"/>
+  
+  <!-- Large geometric shapes -->
+  <circle cx="200" cy="200" r="150" fill="url(#radial1)" opacity="0.3"/>
+  <circle cx="1720" cy="300" r="200" fill="url(#gradient2)" opacity="0.2"/>
+  <circle cx="400" cy="800" r="120" fill="url(#radial1)" opacity="0.25"/>
+  <circle cx="1500" cy="900" r="180" fill="url(#gradient2)" opacity="0.15"/>
+  
+  <!-- Hexagonal patterns -->
+  <g opacity="0.1">
+    <polygon points="300,100 350,130 350,180 300,210 250,180 250,130" fill="#667eea"/>
+    <polygon points="1600,150 1650,180 1650,230 1600,260 1550,230 1550,180" fill="#764ba2"/>
+    <polygon points="500,700 550,730 550,780 500,810 450,780 450,730" fill="#4facfe"/>
+    <polygon points="1400,800 1450,830 1450,880 1400,910 1350,880 1350,830" fill="#f093fb"/>
+  </g>
+  
+  <!-- Floating elements -->
+  <g opacity="0.15">
+    <rect x="100" y="400" width="80" height="80" rx="20" fill="#667eea" transform="rotate(15 140 440)"/>
+    <rect x="1700" y="500" width="60" height="60" rx="15" fill="#764ba2" transform="rotate(-20 1730 530)"/>
+    <rect x="150" y="700" width="70" height="70" rx="35" fill="#4facfe" transform="rotate(45 185 735)"/>
+    <rect x="1600" y="700" width="90" height="90" rx="45" fill="#f093fb" transform="rotate(-30 1645 745)"/>
+  </g>
+  
+  <!-- Dot pattern overlay -->
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  
+  <!-- Grid pattern overlay -->
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Subtle wave patterns -->
+  <path d="M0,400 Q480,350 960,400 T1920,400 L1920,500 Q1440,450 960,500 T0,500 Z" fill="#667eea" opacity="0.05"/>
+  <path d="M0,600 Q480,650 960,600 T1920,600 L1920,700 Q1440,750 960,700 T0,700 Z" fill="#764ba2" opacity="0.05"/>
+  
+  <!-- Abstract learning symbols -->
+  <g opacity="0.08">
+    <!-- Book icons -->
+    <rect x="800" y="200" width="40" height="30" rx="2" fill="#667eea"/>
+    <rect x="810" y="205" width="20" height="20" fill="white"/>
+    
+    <rect x="1000" y="300" width="35" height="25" rx="2" fill="#764ba2"/>
+    <rect x="1008" y="303" width="19" height="19" fill="white"/>
+    
+    <!-- Graduation cap icons -->
+    <path d="M1200,250 L1220,240 L1240,250 L1220,260 Z" fill="#4facfe"/>
+    <rect x="1210" y="250" width="20" height="15" fill="#4facfe"/>
+    
+    <path d="M200,600 L220,590 L240,600 L220,610 Z" fill="#f093fb"/>
+    <rect x="210" y="600" width="20" height="15" fill="#f093fb"/>
+    
+    <!-- Lightbulb icons -->
+    <circle cx="600" cy="150" r="12" fill="#667eea"/>
+    <rect x="595" y="162" width="10" height="8" fill="#667eea"/>
+    
+    <circle cx="1300" cy="800" r="10" fill="#764ba2"/>
+    <rect x="1297" y="810" width="6" height="6" fill="#764ba2"/>
+  </g>
+</svg>

@@ -3,45 +3,298 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Star, ChevronRight, TrendingUp } from "lucide-react";
+import { Clock, Users, Star, ChevronRight, TrendingUp, Award } from "lucide-react";
+import { useState } from "react";
 
 const Courses = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All Courses");
+
   const featuredCourses = [
     {
-      title: "Machine Learning Fundamentals",
-      instructor: "Dr. Sarah Chen",
+      title: "AI & Designing Technology",
+      instructor: "Dr. Ananya Gupta",
       category: "Technology",
-      level: "Intermediate",
-      duration: "8 weeks",
-      students: 2456,
-      rating: 4.8,
-      price: "$89",
-      trending: true,
-      image: "bg-gradient-to-br from-purple-500 to-blue-500",
-    },
-    {
-      title: "Digital Marketing Mastery",
-      instructor: "Michael Rodriguez",
-      category: "Marketing",
-      level: "Beginner",
-      duration: "6 weeks",
-      students: 3821,
-      rating: 4.9,
-      price: "$69",
-      trending: false,
-      image: "bg-gradient-to-br from-orange-500 to-red-500",
-    },
-    {
-      title: "Financial Analysis & Investment",
-      instructor: "Prof. James Wilson",
-      category: "Finance",
       level: "Advanced",
-      duration: "10 weeks",
-      students: 1892,
-      rating: 4.7,
-      price: "$99",
+      duration: "12 months",
+      students: 3240,
+      rating: 4.9,
+      price: "₹4,999",
       trending: true,
-      image: "bg-gradient-to-br from-green-500 to-teal-500",
+      image: "bg-gradient-to-br from-blue-500 to-purple-500",
+      certification: true,
+    },
+    {
+      title: "AI & Arts",
+      instructor: "Vikram Singh",
+      category: "Technology",
+      level: "Advanced",
+      duration: "12 months",
+      students: 2890,
+      rating: 4.8,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-purple-500 to-pink-500",
+      certification: true,
+    },
+    {
+      title: "AI & Business",
+      instructor: "Suresh Mehta",
+      category: "Business",
+      level: "Advanced",
+      duration: "12 months",
+      students: 2150,
+      rating: 4.8,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-green-500 to-blue-500",
+      certification: true,
+    },
+    {
+      title: "AI & Management Studies",
+      instructor: "Dr. Ananya Gupta",
+      category: "Business",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1980,
+      rating: 4.7,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-indigo-500 to-purple-500",
+      certification: true,
+    },
+    {
+      title: "AI & Law",
+      instructor: "Dr. Rajesh Kumar",
+      category: "Artificial Intelligence",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1650,
+      rating: 4.6,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-red-500 to-orange-500",
+      certification: true,
+    },
+    {
+      title: "IP Law",
+      instructor: "Dr. Priya Sharma",
+      category: "Artificial Intelligence",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1420,
+      rating: 4.5,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-amber-500 to-yellow-500",
+      certification: true,
+    },
+    {
+      title: "AI & Blockchain",
+      instructor: "Vikram Singh",
+      category: "Artificial Intelligence",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1890,
+      rating: 4.8,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-cyan-500 to-blue-500",
+      certification: true,
+    },
+    {
+      title: "AI & Data Analytics",
+      instructor: "Dr. Ananya Gupta",
+      category: "Artificial Intelligence",
+      level: "Advanced",
+      duration: "12 months",
+      students: 2230,
+      rating: 4.9,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-emerald-500 to-teal-500",
+      certification: true,
+    },
+    {
+      title: "Digital Forensics",
+      instructor: "Dr. Rajesh Kumar",
+      category: "Healthcare",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1560,
+      rating: 4.7,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-slate-500 to-gray-500",
+      certification: true,
+    },
+    {
+      title: "Medical Coding",
+      instructor: "Dr. Priya Sharma",
+      category: "Healthcare",
+      level: "Advanced",
+      duration: "12 months",
+      students: 2780,
+      rating: 4.8,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-rose-500 to-pink-500",
+      certification: true,
+    },
+    {
+      title: "Bioentrepreneurship",
+      instructor: "Dr. Ananya Gupta",
+      category: "Healthcare",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1920,
+      rating: 4.6,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-lime-500 to-green-500",
+      certification: true,
+    },
+    {
+      title: "Industrial Fermentation Technology",
+      instructor: "Dr. Rajesh Kumar",
+      category: "Healthcare",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1680,
+      rating: 4.7,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-orange-500 to-amber-500",
+      certification: true,
+    },
+    {
+      title: "XR Gaming",
+      instructor: "Vikram Singh",
+      category: "Emerging Technologies",
+      level: "Advanced",
+      duration: "12 months",
+      students: 2100,
+      rating: 4.8,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-violet-500 to-purple-500",
+      certification: true,
+    },
+    {
+      title: "AR and Mixed Reality",
+      instructor: "Dr. Ananya Gupta",
+      category: "Emerging Technologies",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1850,
+      rating: 4.7,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-indigo-500 to-blue-500",
+      certification: true,
+    },
+    {
+      title: "Virtual & Augmented Reality Engineering",
+      instructor: "Suresh Mehta",
+      category: "Emerging Technologies",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1950,
+      rating: 4.9,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-cyan-500 to-teal-500",
+      certification: true,
+    },
+    {
+      title: "Digital Marketing Strategy",
+      instructor: "Dr. Priya Sharma",
+      category: "Agriculture",
+      level: "Advanced",
+      duration: "12 months",
+      students: 3200,
+      rating: 4.8,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-pink-500 to-rose-500",
+      certification: true,
+    },
+    {
+      title: "Social Media Marketing",
+      instructor: "Vikram Singh",
+      category: "Agriculture",
+      level: "Advanced",
+      duration: "12 months",
+      students: 2850,
+      rating: 4.7,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-blue-500 to-indigo-500",
+      certification: true,
+    },
+    {
+      title: "Marketing Analytics",
+      instructor: "Dr. Ananya Gupta",
+      category: "Agriculture",
+      level: "Advanced",
+      duration: "12 months",
+      students: 2450,
+      rating: 4.9,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-emerald-500 to-green-500",
+      certification: true,
+    },
+    {
+      title: "Precision Agriculture",
+      instructor: "Dr. Rajesh Kumar",
+      category: "Agriculture",
+      level: "Advanced",
+      duration: "12 months",
+      students: 2100,
+      rating: 4.8,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-green-500 to-lime-500",
+      certification: true,
+    },
+    {
+      title: "Agriculture Drones",
+      instructor: "Vikram Singh",
+      category: "Agriculture",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1850,
+      rating: 4.7,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-sky-500 to-blue-500",
+      certification: true,
+    },
+    {
+      title: "Agriculture Robotics",
+      instructor: "Dr. Ananya Gupta",
+      category: "Agriculture",
+      level: "Advanced",
+      duration: "12 months",
+      students: 1950,
+      rating: 4.9,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-orange-500 to-red-500",
+      certification: true,
+    },
+    {
+      title: "Agri Entrepreneurship",
+      instructor: "Suresh Mehta",
+      category: "Agriculture",
+      level: "Advanced",
+      duration: "12 months",
+      students: 2200,
+      rating: 4.6,
+      price: "₹4,999",
+      trending: true,
+      image: "bg-gradient-to-br from-yellow-500 to-orange-500",
+      certification: true,
     },
   ];
 
@@ -49,11 +302,16 @@ const Courses = () => {
     "All Courses",
     "Technology",
     "Business",
-    "Design",
-    "Marketing",
-    "Finance",
-    "Personal Development",
+    "Agriculture",
+    "Healthcare",
+    "Emerging Technologies",
+    "Artificial Intelligence",
   ];
+
+  // Filter courses based on selected category
+  const filteredCourses = selectedCategory === "All Courses" 
+    ? featuredCourses 
+    : featuredCourses.filter(course => course.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-background">
@@ -74,9 +332,10 @@ const Courses = () => {
               {categories.map((category, index) => (
                 <Button
                   key={index}
-                  variant={index === 0 ? "default" : "outline"}
+                  variant={selectedCategory === category ? "default" : "outline"}
                   size="sm"
                   className="rounded-full"
+                  onClick={() => setSelectedCategory(category)}
                 >
                   {category}
                 </Button>
@@ -85,7 +344,7 @@ const Courses = () => {
 
             {/* Featured Courses Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {featuredCourses.map((course, index) => (
+              {filteredCourses.map((course, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   {/* Course Image */}
                   <div className={`h-48 ${course.image} relative`}>
@@ -123,7 +382,15 @@ const Courses = () => {
                         {course.rating}
                       </div>
                     </div>
-                    <Badge variant="secondary">{course.level}</Badge>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Badge variant="secondary">{course.level}</Badge>
+                      {course.certification && (
+                        <Badge variant="default" className="bg-primary text-primary-foreground">
+                          <Award className="h-3 w-3 mr-1" />
+                          Certification
+                        </Badge>
+                      )}
+                    </div>
                   </CardContent>
 
                   <CardFooter className="flex justify-between items-center">
