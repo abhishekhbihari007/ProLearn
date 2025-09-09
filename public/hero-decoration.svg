@@ -1,0 +1,29 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Abstract learning elements -->
+  <circle cx="100" cy="100" r="80" fill="url(#gradient1)" opacity="0.1"/>
+  <circle cx="100" cy="100" r="60" fill="none" stroke="url(#gradient1)" stroke-width="2" opacity="0.2"/>
+  <circle cx="100" cy="100" r="40" fill="none" stroke="url(#gradient1)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Learning symbols -->
+  <g transform="translate(100, 100)">
+    <!-- Book icon -->
+    <rect x="-15" y="-5" width="10" height="15" rx="1" fill="url(#gradient1)" opacity="0.4"/>
+    <rect x="-12" y="-2" width="10" height="15" rx="1" fill="url(#gradient1)" opacity="0.6"/>
+    <rect x="-9" y="1" width="10" height="15" rx="1" fill="url(#gradient1)" opacity="0.8"/>
+    
+    <!-- Lightbulb -->
+    <circle cx="15" cy="-10" r="6" fill="url(#gradient1)" opacity="0.5"/>
+    <rect x="12" y="-4" width="6" height="4" fill="url(#gradient1)" opacity="0.4"/>
+    
+    <!-- Graduation cap -->
+    <path d="M-20 5 L-10 5 L-15 0 Z" fill="url(#gradient1)" opacity="0.4"/>
+    <rect x="-22" y="5" width="14" height="2" fill="url(#gradient1)" opacity="0.3"/>
+  </g>
+</svg>

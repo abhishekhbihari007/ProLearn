@@ -19,37 +19,19 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Newsletter Section */}
-        <div className="bg-gradient-primary rounded-2xl p-8 mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="text-primary-foreground">
-              <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-              <p className="opacity-90">Get the latest courses and exclusive offers delivered to your inbox</p>
-            </div>
-            <div className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60"
-              />
-              <Button variant="secondary">Subscribe</Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Top Section: Prolearn Branding + Newsletter */}
+        <div className="flex flex-row gap-2 mb-8 items-start overflow-hidden">
           {/* Logo and Description */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="bg-gradient-primary p-2 rounded-lg">
-                <GraduationCap className="h-6 w-6 text-primary-foreground" />
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg shadow-lg">
+                <GraduationCap className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-foreground">Prolearn</span>
+              <span className="text-lg font-bold text-white">Prolearn</span>
             </div>
-            <p className="text-muted-foreground text-sm mb-4">
+            <p className="text-slate-300 text-xs mb-2 leading-relaxed">
               Empowering learners worldwide with expert knowledge and practical skills.
             </p>
             <div className="flex gap-2">
@@ -57,7 +39,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="p-2 rounded-lg bg-blue-600 hover:bg-purple-600 text-white transition-all duration-300 transform hover:scale-110"
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
@@ -65,16 +47,35 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Newsletter Section */}
+          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 rounded-2xl p-4 shadow-2xl flex-1 min-w-0">
+            <div className="text-white">
+              <h3 className="text-lg font-bold mb-2">Stay Updated</h3>
+              <p className="opacity-90 text-xs leading-relaxed mb-3">Get the latest courses and exclusive offers delivered to your inbox</p>
+              <div className="flex flex-row gap-2">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/30 flex-1 text-xs h-8"
+                />
+                <Button className="bg-white text-blue-600 hover:bg-white/90 font-semibold px-4 py-1 text-xs h-8 whitespace-nowrap">Subscribe</Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-4 gap-6 mb-6">
           {/* Footer Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="font-semibold text-foreground mb-4">{category}</h4>
+              <h4 className="font-semibold text-white mb-3 text-base">{category}</h4>
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
                     >
                       {link}
                     </a>
@@ -86,16 +87,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © 2024 Prolearn. All rights reserved.
+        <div className="pt-6 border-t border-slate-700">
+          <div className="flex flex-row justify-center items-center gap-6">
+            <p className="text-sm text-white">
+              © 2025 Prolearn. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-              <a href="#" className="hover:text-primary transition-colors">Terms</a>
-              <a href="#" className="hover:text-primary transition-colors">Cookies</a>
-              <a href="#" className="hover:text-primary transition-colors">Sitemap</a>
+            <div className="flex gap-4 text-sm text-white">
+              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Privacy</a>
+              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Terms</a>
             </div>
           </div>
         </div>

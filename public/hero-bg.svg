@@ -1,0 +1,170 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Premium gradient backgrounds -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="15%" style="stop-color:#F8FAFC;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#F1F5F9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E2E8F0;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#CBD5E1;stop-opacity:1" />
+      <stop offset="85%" style="stop-color:#94A3B8;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#64748B;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- Premium floating orb gradients with more depth -->
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.25" />
+      <stop offset="30%" style="stop-color:#3B82F6;stop-opacity:0.15" />
+      <stop offset="70%" style="stop-color:#3B82F6;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.20" />
+      <stop offset="30%" style="stop-color:#8B5CF6;stop-opacity:0.12" />
+      <stop offset="70%" style="stop-color:#8B5CF6;stop-opacity:0.06" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="orb3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.18" />
+      <stop offset="30%" style="stop-color:#10B981;stop-opacity:0.10" />
+      <stop offset="70%" style="stop-color:#10B981;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="orb4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.15" />
+      <stop offset="30%" style="stop-color:#F59E0B;stop-opacity:0.08" />
+      <stop offset="70%" style="stop-color:#F59E0B;stop-opacity:0.04" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Advanced mesh gradient with multiple color stops -->
+    <radialGradient id="meshGradient" cx="25%" cy="15%" r="80%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.05" />
+      <stop offset="20%" style="stop-color:#8B5CF6;stop-opacity:0.04" />
+      <stop offset="40%" style="stop-color:#10B981;stop-opacity:0.03" />
+      <stop offset="60%" style="stop-color:#F59E0B;stop-opacity:0.02" />
+      <stop offset="80%" style="stop-color:#EF4444;stop-opacity:0.01" />
+      <stop offset="100%" style="stop-color:#6B7280;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Additional gradient for depth -->
+    <linearGradient id="depthGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#F8FAFC;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:0.02" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1920" height="1080" fill="url(#mainGradient)"/>
+  
+  <!-- Depth gradient overlay -->
+  <rect width="1920" height="1080" fill="url(#depthGradient)"/>
+  
+  <!-- Mesh gradient overlay -->
+  <rect width="1920" height="1080" fill="url(#meshGradient)"/>
+  
+  <!-- Large premium floating orbs with varied sizes -->
+  <circle cx="120" cy="180" r="220" fill="url(#orb1)"/>
+  <circle cx="1750" cy="120" r="180" fill="url(#orb2)"/>
+  <circle cx="180" cy="820" r="200" fill="url(#orb3)"/>
+  <circle cx="1650" cy="780" r="160" fill="url(#orb4)"/>
+  <circle cx="80" cy="480" r="140" fill="url(#orb1)"/>
+  <circle cx="1840" cy="420" r="120" fill="url(#orb2)"/>
+  
+  <!-- Medium floating orbs with enhanced positioning -->
+  <circle cx="350" cy="280" r="80" fill="url(#orb3)"/>
+  <circle cx="1450" cy="380" r="90" fill="url(#orb4)"/>
+  <circle cx="450" cy="720" r="70" fill="url(#orb1)"/>
+  <circle cx="1350" cy="620" r="85" fill="url(#orb2)"/>
+  <circle cx="250" cy="400" r="60" fill="url(#orb3)"/>
+  <circle cx="1550" cy="500" r="75" fill="url(#orb4)"/>
+  
+  <!-- Small accent orbs with strategic placement -->
+  <circle cx="750" cy="180" r="40" fill="url(#orb3)"/>
+  <circle cx="1150" cy="280" r="35" fill="url(#orb4)"/>
+  <circle cx="650" cy="620" r="45" fill="url(#orb1)"/>
+  <circle cx="1250" cy="820" r="38" fill="url(#orb2)"/>
+  <circle cx="950" cy="120" r="30" fill="url(#orb3)"/>
+  <circle cx="1050" cy="720" r="32" fill="url(#orb4)"/>
+  
+  <!-- Enhanced geometric patterns with more variety -->
+  <g opacity="0.03">
+    <!-- Modern hexagons with different sizes -->
+    <polygon points="150,80 200,110 200,160 150,190 100,160 100,110" fill="#3B82F6"/>
+    <polygon points="1650,180 1700,210 1700,260 1650,290 1600,260 1600,210" fill="#8B5CF6"/>
+    <polygon points="250,680 300,710 300,760 250,790 200,760 200,710" fill="#10B981"/>
+    <polygon points="1400,480 1450,510 1450,560 1400,590 1350,560 1350,510" fill="#F59E0B"/>
+    
+    <!-- Modern rectangles with varied rotations -->
+    <rect x="80" y="80" width="140" height="100" rx="20" fill="#3B82F6" transform="rotate(25 150 130)"/>
+    <rect x="1480" y="280" width="120" height="80" rx="15" fill="#8B5CF6" transform="rotate(-20 1540 320)"/>
+    <rect x="380" y="580" width="160" height="110" rx="22" fill="#10B981" transform="rotate(35 460 635)"/>
+    <rect x="1200" y="180" width="100" height="70" rx="12" fill="#F59E0B" transform="rotate(-15 1250 215)"/>
+    
+    <!-- Diamond shapes for variety -->
+    <polygon points="600,200 650,250 600,300 550,250" fill="#3B82F6" transform="rotate(45 600 250)"/>
+    <polygon points="1300,600 1350,650 1300,700 1250,650" fill="#8B5CF6" transform="rotate(-30 1300 650)"/>
+  </g>
+  
+  <!-- Enhanced learning-themed modern icons -->
+  <g opacity="0.05">
+    <!-- Premium book stack with more detail -->
+    <rect x="780" y="180" width="60" height="80" rx="8" fill="#3B82F6"/>
+    <rect x="800" y="160" width="60" height="80" rx="8" fill="#3B82F6"/>
+    <rect x="820" y="140" width="60" height="80" rx="8" fill="#3B82F6"/>
+    <rect x="840" y="120" width="60" height="80" rx="8" fill="#3B82F6"/>
+    
+    <!-- Premium graduation cap -->
+    <path d="M1180 280 L1320 280 L1250 220 Z" fill="#8B5CF6"/>
+    <rect x="1140" y="280" width="220" height="15" rx="8" fill="#8B5CF6"/>
+    <rect x="1150" y="295" width="200" height="8" rx="4" fill="#8B5CF6"/>
+    
+    <!-- Premium lightbulb with glow effect -->
+    <circle cx="580" cy="380" r="45" fill="#F59E0B"/>
+    <rect x="560" y="420" width="40" height="25" rx="6" fill="#92400E"/>
+    <path d="M560 445 L600 445 L580 465 Z" fill="#92400E"/>
+    
+    <!-- Premium laptop/computer setup -->
+    <rect x="980" y="580" width="100" height="70" rx="12" fill="#10B981"/>
+    <rect x="1000" y="600" width="60" height="40" rx="6" fill="#FFFFFF"/>
+    <rect x="990" y="650" width="120" height="12" rx="6" fill="#10B981"/>
+    <rect x="1000" y="662" width="100" height="8" rx="4" fill="#6B7280"/>
+    
+    <!-- Modern tablet/phone -->
+    <rect x="1400" y="300" width="50" height="70" rx="8" fill="#3B82F6"/>
+    <rect x="1410" y="310" width="30" height="50" rx="4" fill="#FFFFFF"/>
+    
+    <!-- Modern headset for online learning -->
+    <ellipse cx="200" cy="300" rx="40" ry="25" fill="#8B5CF6"/>
+    <ellipse cx="200" cy="300" rx="25" ry="15" fill="#FFFFFF"/>
+    <rect x="175" y="300" width="50" height="8" rx="4" fill="#8B5CF6"/>
+  </g>
+  
+  <!-- Subtle grid pattern with enhanced visibility -->
+  <g opacity="0.015" stroke="#3B82F6" stroke-width="1" fill="none">
+    <defs>
+      <pattern id="grid" width="120" height="120" patternUnits="userSpaceOnUse">
+        <path d="M 120 0 L 0 0 0 120" />
+      </pattern>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#grid)" />
+  </g>
+  
+  <!-- Additional subtle dots pattern -->
+  <g opacity="0.02" fill="#3B82F6">
+    <circle cx="300" cy="150" r="2"/>
+    <circle cx="600" cy="250" r="1.5"/>
+    <circle cx="900" cy="350" r="2"/>
+    <circle cx="1200" cy="450" r="1.5"/>
+    <circle cx="1500" cy="550" r="2"/>
+    <circle cx="1800" cy="650" r="1.5"/>
+    <circle cx="400" cy="750" r="2"/>
+    <circle cx="700" cy="850" r="1.5"/>
+    <circle cx="1000" cy="950" r="2"/>
+    <circle cx="1300" cy="1050" r="1.5"/>
+  </g>
+</svg>
