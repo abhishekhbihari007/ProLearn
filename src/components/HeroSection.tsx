@@ -10,16 +10,84 @@ const HeroSection = () => {
 
   const stats = [
     { icon: Users, value: "10,000+", label: "Active Learners" },
-    { icon: BookOpen, value: "500+", label: "Expert Courses" },
+    { icon: BookOpen, value: "100+", label: "Expert Courses" },
     { icon: Award, value: "95%", label: "Success Rate" },
   ];
 
   return (
-    <section id="home" className="relative min-h-[70vh] flex items-center justify-center pt-8 overflow-hidden">
-      {/* Multi-layered Background System */}
-      
-      {/* Base gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-100/20"></div>
+    <section id="home" className="relative min-h-[80vh] flex items-center justify-center pt-8 overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('data:image/svg+xml;charset=utf-8,${encodeURIComponent(`
+              <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#e2e8f0;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                <rect width="1920" height="1080" fill="url(#bg)"/>
+                <rect x="300" y="200" width="600" height="400" fill="#1f2937" rx="8"/>
+                <rect x="320" y="220" width="560" height="360" fill="#111827" rx="4"/>
+                <text x="400" y="280" fill="#f9fafb" font-family="Arial" font-size="24" font-weight="bold">AI &amp; Machine Learning</text>
+                <text x="400" y="320" fill="#f9fafb" font-family="Arial" font-size="20">&bull; Neural Networks</text>
+                <text x="400" y="350" fill="#f9fafb" font-family="Arial" font-size="20">&bull; Deep Learning</text>
+                <text x="400" y="380" fill="#f9fafb" font-family="Arial" font-size="20">&bull; Data Science</text>
+                <text x="400" y="410" fill="#f9fafb" font-family="Arial" font-size="20">&bull; Python Programming</text>
+                <text x="400" y="440" fill="#f9fafb" font-family="Arial" font-size="20">&bull; TensorFlow &amp; PyTorch</text>
+                <text x="400" y="470" fill="#f9fafb" font-family="Arial" font-size="20">&bull; Computer Vision</text>
+                <text x="400" y="500" fill="#f9fafb" font-family="Arial" font-size="20">&bull; Natural Language Processing</text>
+                <rect x="200" y="650" width="200" height="100" fill="#8b5cf6" opacity="0.3" rx="8"/>
+                <rect x="210" y="660" width="180" height="80" fill="#7c3aed" opacity="0.4" rx="4"/>
+                <rect x="250" y="680" width="100" height="60" fill="#374151" rx="4"/>
+                <rect x="260" y="690" width="80" height="40" fill="#1f2937" rx="2"/>
+                <rect x="1000" y="300" width="120" height="80" fill="#3b82f6" opacity="0.2" rx="4"/>
+                <rect x="1150" y="300" width="120" height="80" fill="#3b82f6" opacity="0.2" rx="4"/>
+                <rect x="1300" y="300" width="120" height="80" fill="#3b82f6" opacity="0.2" rx="4"/>
+                <rect x="1000" y="400" width="120" height="80" fill="#3b82f6" opacity="0.2" rx="4"/>
+                <rect x="1150" y="400" width="120" height="80" fill="#3b82f6" opacity="0.2" rx="4"/>
+                <rect x="1300" y="400" width="120" height="80" fill="#3b82f6" opacity="0.2" rx="4"/>
+                <rect x="1050" y="320" width="20" height="40" fill="#dc2626" opacity="0.6"/>
+                <rect x="1075" y="320" width="20" height="40" fill="#059669" opacity="0.6"/>
+                <rect x="1100" y="320" width="20" height="40" fill="#7c3aed" opacity="0.6"/>
+                <rect x="1200" y="320" width="20" height="40" fill="#dc2626" opacity="0.6"/>
+                <rect x="1225" y="320" width="20" height="40" fill="#059669" opacity="0.6"/>
+                <rect x="1250" y="320" width="20" height="40" fill="#7c3aed" opacity="0.6"/>
+                <rect x="1020" y="330" width="60" height="40" fill="#374151" opacity="0.7" rx="2"/>
+                <rect x="1170" y="330" width="60" height="40" fill="#374151" opacity="0.7" rx="2"/>
+                <rect x="1320" y="330" width="60" height="40" fill="#374151" opacity="0.7" rx="2"/>
+                <circle cx="150" cy="150" r="25" fill="#3b82f6" opacity="0.3"/>
+                <text x="140" y="160" fill="#1e40af" font-family="Arial" font-size="20" font-weight="bold">📚</text>
+                <circle cx="1700" cy="200" r="25" fill="#10b981" opacity="0.3"/>
+                <text x="1690" y="210" fill="#059669" font-family="Arial" font-size="20" font-weight="bold">💻</text>
+                <circle cx="150" cy="800" r="25" fill="#8b5cf6" opacity="0.3"/>
+                <text x="140" y="810" fill="#7c3aed" font-family="Arial" font-size="20" font-weight="bold">🎓</text>
+                <circle cx="1700" cy="850" r="25" fill="#f59e0b" opacity="0.3"/>
+                <text x="1690" y="860" fill="#d97706" font-family="Arial" font-size="20" font-weight="bold">🔬</text>
+                <rect x="50" y="100" width="4" height="200" fill="#fbbf24" opacity="0.4" transform="rotate(15 52 200)"/>
+                <rect x="80" y="80" width="4" height="180" fill="#fbbf24" opacity="0.4" transform="rotate(15 82 170)"/>
+                <rect x="110" y="60" width="4" height="160" fill="#fbbf24" opacity="0.4" transform="rotate(15 112 140)"/>
+                <rect x="0" y="750" width="1920" height="330" fill="#f1f5f9"/>
+                <rect x="1600" y="100" width="80" height="60" fill="#1e40af" opacity="0.2" rx="8"/>
+                <text x="1620" y="140" fill="#1e40af" font-family="Arial" font-size="16" font-weight="bold">AI Lab</text>
+                <rect x="1600" y="180" width="80" height="60" fill="#059669" opacity="0.2" rx="8"/>
+                <text x="1610" y="220" fill="#059669" font-family="Arial" font-size="16" font-weight="bold">Data Lab</text>
+              </svg>
+            `)}')`
+          }}
+        ></div>
+        
+        {/* Light overlay for better text readability */}
+        <div className="absolute inset-0 bg-white/20"></div>
+        
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/30"></div>
+      </div>
       
       {/* Animated mesh gradient overlay */}
       <div className="absolute inset-0 opacity-40">
@@ -87,7 +155,6 @@ const HeroSection = () => {
             Connect with subject matter experts and academics in cutting-edge fields. 
             <span className="text-slate-700 font-semibold">Gain practical knowledge</span> through hands-on demonstrations and real-world exercises.
           </p>
-
 
           {/* Enhanced Stats with glassmorphism cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
