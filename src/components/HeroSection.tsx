@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Users, Award, BookOpen } from "lucide-react";
+import { Users, Award, BookOpen } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {
@@ -16,7 +15,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden">
+    <section id="home" className="relative min-h-[70vh] flex items-center justify-center pt-8 overflow-hidden">
       {/* Multi-layered Background System */}
       
       {/* Base gradient background */}
@@ -72,16 +71,11 @@ const HeroSection = () => {
         backgroundSize: '50px 50px'
       }}></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {/* Enhanced Badge with glassmorphism */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full mb-6 shadow-lg hover:bg-white/15 transition-all duration-300">
-            <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full animate-pulse"></span>
-            <span className="text-sm font-medium text-slate-700">New courses added weekly</span>
-          </div>
 
           {/* Enhanced Main Heading with better gradients */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-4 leading-tight">
             Learn from the
             <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent leading-tight animate-pulse">
               Subject Matter Experts
@@ -89,33 +83,14 @@ const HeroSection = () => {
           </h1>
 
           {/* Enhanced Subheading with better typography */}
-          <p className="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto mb-8 font-medium leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto mb-6 font-medium leading-relaxed">
             Connect with subject matter experts and academics in cutting-edge fields. 
             <span className="text-slate-700 font-semibold">Gain practical knowledge</span> through hands-on demonstrations and real-world exercises.
           </p>
 
-          {/* Enhanced CTA Buttons with better styling */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              Start Learning Today
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              variant="secondary" 
-              size="lg" 
-              className="group !bg-white/95 !backdrop-blur-md !border-2 !border-slate-200 hover:!bg-white hover:!border-slate-300 !text-slate-800 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Watch Demo
-            </Button>
-          </div>
 
           {/* Enhanced Stats with glassmorphism cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <div
                 key={index}
@@ -123,7 +98,7 @@ const HeroSection = () => {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
-                <div className="flex flex-col items-center gap-4 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div className="flex flex-col items-center gap-3 p-5 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                   <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-4 rounded-xl shadow-lg">
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>

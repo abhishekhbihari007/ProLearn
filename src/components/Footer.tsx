@@ -1,6 +1,4 @@
 import { GraduationCap, Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 const Footer = () => {
   const footerLinks = {
@@ -21,46 +19,27 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Top Section: Prolearn Branding + Newsletter */}
-        <div className="flex flex-row gap-2 mb-8 items-start overflow-hidden">
-          {/* Logo and Description */}
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg shadow-lg">
-                <GraduationCap className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-lg font-bold text-white">Prolearn</span>
+        {/* Top Section: Prolearn Branding */}
+        <div className="mb-8">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg shadow-lg">
+              <GraduationCap className="h-5 w-5 text-white" />
             </div>
-            <p className="text-slate-300 text-xs mb-2 leading-relaxed">
-              Empowering learners worldwide with expert knowledge and practical skills.
-            </p>
-            <div className="flex gap-2">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="p-2 rounded-lg bg-blue-600 hover:bg-purple-600 text-white transition-all duration-300 transform hover:scale-110"
-                >
-                  <social.icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
+            <span className="text-lg font-bold text-white">Prolearn</span>
           </div>
-
-          {/* Newsletter Section */}
-          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 rounded-2xl p-4 shadow-2xl flex-1 min-w-0">
-            <div className="text-white">
-              <h3 className="text-lg font-bold mb-2">Stay Updated</h3>
-              <p className="opacity-90 text-xs leading-relaxed mb-3">Get the latest courses and exclusive offers delivered to your inbox</p>
-              <div className="flex flex-row gap-2">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/30 flex-1 text-xs h-8"
-                />
-                <Button className="bg-white text-blue-600 hover:bg-white/90 font-semibold px-4 py-1 text-xs h-8 whitespace-nowrap">Subscribe</Button>
-              </div>
-            </div>
+          <p className="text-slate-300 text-xs mb-2 leading-relaxed">
+            Empowering learners worldwide with expert knowledge and practical skills.
+          </p>
+          <div className="flex gap-2">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                className="p-2 rounded-lg bg-blue-600 hover:bg-purple-600 text-white transition-all duration-300 transform hover:scale-110"
+              >
+                <social.icon className="h-4 w-4" />
+              </a>
+            ))}
           </div>
         </div>
 
