@@ -238,7 +238,12 @@ const Home = () => {
                     VS
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Vikram Singh</h3>
-                  <p className="text-primary font-medium mb-3">Senior React Developer</p>
+                  <p className="text-primary font-medium mb-2">Technology & Emerging Tech Expert</p>
+                  <div className="flex flex-wrap justify-center gap-1 mb-3">
+                    <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">AI & Arts</span>
+                    <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">Add up</span>
+                    <span className="px-2 py-1 bg-cyan-100 text-cyan-800 text-xs rounded-full">AR/VR Engineering</span>
+                  </div>
                   <div className="flex items-center justify-center mb-3">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
@@ -268,7 +273,13 @@ const Home = () => {
                     AG
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Dr. Ananya Gupta</h3>
-                  <p className="text-primary font-medium mb-3">Data Science Lead</p>
+                  <p className="text-primary font-medium mb-2">AI & Healthcare Specialist</p>
+                  <div className="flex flex-wrap justify-center gap-1 mb-3">
+                    <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">AI & Designing</span>
+                    <span className="px-2 py-1 bg-emerald-100 text-emerald-800 text-xs rounded-full">AI & Data Analytics</span>
+                    <span className="px-2 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">Medical Coding</span>
+                    <span className="px-2 py-1 bg-lime-100 text-lime-800 text-xs rounded-full">Bioentrepreneurship</span>
+                  </div>
                   <div className="flex items-center justify-center mb-3">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
@@ -298,7 +309,13 @@ const Home = () => {
                     SM
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Suresh Mehta</h3>
-                  <p className="text-primary font-medium mb-3">Digital Marketing Expert</p>
+                  <p className="text-primary font-medium mb-2">Business & Agriculture Expert</p>
+                  <div className="flex flex-wrap justify-center gap-1 mb-3">
+                    <span className="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">AI & Business</span>
+                    <span className="px-2 py-1 bg-cyan-100 text-cyan-800 text-xs rounded-full">AR/VR Engineering</span>
+                    <span className="px-2 py-1 bg-pink-100 text-pink-800 text-xs rounded-full">Digital Marketing</span>
+                    <span className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Agri Entrepreneurship</span>
+                  </div>
                   <div className="flex items-center justify-center mb-3">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (

@@ -8,6 +8,7 @@ import { useState } from "react";
 
 const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Courses");
+  
 
   const featuredCourses = [
     {

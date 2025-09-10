@@ -1,73 +1,126 @@
-# Welcome to your Lovable project
+# ProLearn - Expert-Led Learning Platform
 
-## Project info
+ProLearn is a modern, comprehensive learning platform that connects students with industry experts and academics. Our platform offers cutting-edge courses across various domains including AI, Technology, Healthcare, Agriculture, and Business.
 
-**URL**: https://lovable.dev/projects/19bdbfcd-25a4-4c3a-b1d0-4b38b5796c83
+## 🚀 Features
 
-## How can I edit this code?
+- **Expert Instructors**: Learn from industry leaders and subject matter experts
+- **Diverse Course Catalog**: Courses spanning AI, Technology, Healthcare, Agriculture, and Business
+- **Interactive Learning**: Hands-on demonstrations and real-world exercises
+- **Modern UI/UX**: Beautiful, responsive design with smooth animations
+- **Mobile-First**: Optimized for all devices and screen sizes
 
-There are several ways of editing your application.
+## 🎯 Course Categories
 
-**Use Lovable**
+- **Technology**: AI & Designing, XR Gaming, AR/VR Engineering
+- **Healthcare**: Medical Coding, Bioentrepreneurship, Digital Forensics
+- **Agriculture**: Precision Agriculture, Agriculture Drones, Agri Entrepreneurship
+- **Business**: AI & Business, Digital Marketing, Marketing Analytics
+- **Emerging Technologies**: AI & Data Analytics, Blockchain, Mixed Reality
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/19bdbfcd-25a4-4c3a-b1d0-4b38b5796c83) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React 18, TypeScript, Vite
+- **UI Framework**: Tailwind CSS, shadcn/ui
+- **Icons**: Lucide React
+- **Routing**: React Router DOM
+- **State Management**: React Query
+- **Forms**: React Hook Form
+- **Animations**: CSS Animations & Transitions
 
-**Use your preferred IDE**
+## 📦 Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/prolearn.git
+cd prolearn
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. Install dependencies:
+```bash
+npm install
+```
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and visit `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗️ Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The built files will be in the `dist` directory.
 
-## What technologies are used for this project?
+## 📁 Project Structure
 
-This project is built with:
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── Footer.tsx      # Footer component
+│   ├── HeroSection.tsx # Hero section with animations
+│   ├── Navigation.tsx  # Navigation bar
+│   └── ParticipantSection.tsx
+├── pages/              # Page components
+│   ├── About.tsx       # About page
+│   ├── Contact.tsx     # Contact page
+│   ├── Courses.tsx     # Courses catalog
+│   ├── Home.tsx        # Home page
+│   ├── Instructors.tsx # Instructors page
+│   └── NotFound.tsx    # 404 page
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── main.tsx           # Application entry point
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎨 Design System
 
-## How can I deploy this project?
+The project uses a comprehensive design system with:
 
-Simply open [Lovable](https://lovable.dev/projects/19bdbfcd-25a4-4c3a-b1d0-4b38b5796c83) and click on Share -> Publish.
+- **Color Palette**: Ocean blue primary, teal secondary, warm orange accent
+- **Typography**: Inter font family
+- **Spacing**: Consistent spacing scale
+- **Components**: Reusable UI components with variants
+- **Animations**: Smooth transitions and micro-interactions
 
-## Can I connect a custom domain to my Lovable project?
+## 🚀 Deployment
 
-Yes, you can!
+The application can be deployed to any static hosting service:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Vercel**: `vercel --prod`
+- **Netlify**: Connect your GitHub repository
+- **GitHub Pages**: Use GitHub Actions for deployment
+- **AWS S3**: Upload the `dist` folder to an S3 bucket
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit your changes: `git commit -am 'Add new feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **Email**: Info@prolearn.in
+- **Phone**: +91 98765 43210
+- **Office**: Tech Park, Sector 5, Gurgaon, Haryana 122001
+
+## 🙏 Acknowledgments
+
+- Built with modern web technologies
+- Designed for accessibility and performance
+- Inspired by the need for quality education in emerging technologies
+
+---
+
+**ProLearn** - Empowering learners with expert knowledge and practical skills.

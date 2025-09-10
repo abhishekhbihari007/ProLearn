@@ -21,7 +21,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "support@prolearn.in",
+      value: "Info@prolearn.in",
       action: "Send Email",
     },
     {
