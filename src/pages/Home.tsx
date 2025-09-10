@@ -1,12 +1,17 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
-import { GraduationCap, Wrench, Users, Star, Quote, Award, BookOpen, Play, Clock, TrendingUp } from "lucide-react";
+import { Star, Quote, Play, Clock, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    // Force scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -15,11 +20,33 @@ const Home = () => {
         
         {/* Featured Courses Section */}
         <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
-          {/* Background decorative elements */}
+          {/* Enhanced Background decorative elements with animations */}
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl"></div>
-            <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-200/20 rounded-full blur-xl"></div>
-            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-indigo-200/20 rounded-full blur-xl"></div>
+            <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-200/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-indigo-200/20 rounded-full blur-xl animate-pulse delay-500"></div>
+            
+            {/* Floating animated icons */}
+            <div className="absolute top-32 right-20 animate-bounce delay-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-xl">💻</span>
+              </div>
+            </div>
+            <div className="absolute bottom-32 left-20 animate-bounce delay-700">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-xl">🎓</span>
+              </div>
+            </div>
+            <div className="absolute top-1/3 right-1/3 animate-bounce delay-1000">
+              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-lg">🚀</span>
+              </div>
+            </div>
+            
+            {/* Animated geometric shapes */}
+            <div className="absolute top-40 left-1/3 w-6 h-6 bg-blue-400/30 rotate-45 animate-spin" style={{animationDuration: '8s'}}></div>
+            <div className="absolute bottom-40 right-1/3 w-8 h-8 bg-purple-400/30 rounded-full animate-ping delay-500"></div>
+            <div className="absolute top-1/4 right-1/4 w-4 h-4 bg-indigo-400/40 rotate-12 animate-pulse delay-300"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -81,7 +108,7 @@ const Home = () => {
                     </Button>
                   </Link>
                 </div>
-              </Card>
+                </Card>
 
               {/* Course 2 - AI & Data Analytics */}
               <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
@@ -131,7 +158,7 @@ const Home = () => {
                     </Button>
                   </Link>
                 </div>
-              </Card>
+                </Card>
 
               {/* Course 3 - Medical Coding */}
               <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
@@ -181,8 +208,8 @@ const Home = () => {
                     </Button>
                   </Link>
                 </div>
-              </Card>
-            </div>
+                </Card>
+              </div>
             <div className="text-center mt-12">
                 <Link to="/courses">
                 <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -195,11 +222,33 @@ const Home = () => {
         
         {/* Why Choose Us Section */}
         <section className="py-16 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden">
-          {/* Background decorative elements */}
+          {/* Enhanced Background decorative elements with animations */}
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-10 right-20 w-40 h-40 bg-purple-200/30 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-10 left-20 w-32 h-32 bg-indigo-200/30 rounded-full blur-2xl"></div>
-            <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-pink-200/30 rounded-full blur-2xl"></div>
+            <div className="absolute top-10 right-20 w-40 h-40 bg-purple-200/30 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute bottom-10 left-20 w-32 h-32 bg-indigo-200/30 rounded-full blur-2xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-pink-200/30 rounded-full blur-2xl animate-pulse delay-500"></div>
+            
+            {/* Floating educational icons */}
+            <div className="absolute top-20 left-16 animate-bounce delay-200">
+              <div className="w-14 h-14 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl">
+                <span className="text-white text-2xl">📚</span>
+              </div>
+            </div>
+            <div className="absolute bottom-20 right-16 animate-bounce delay-600">
+              <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-rose-600 rounded-full flex items-center justify-center shadow-xl">
+                <span className="text-white text-2xl">🎯</span>
+              </div>
+            </div>
+            <div className="absolute top-1/2 left-8 animate-bounce delay-1000">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-xl">⭐</span>
+              </div>
+            </div>
+            
+            {/* Animated learning elements */}
+            <div className="absolute top-1/4 left-1/4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-ping delay-300"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rotate-45 animate-spin" style={{animationDuration: '6s'}}></div>
+            <div className="absolute top-3/4 left-1/2 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-pulse delay-700"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
@@ -217,8 +266,9 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
                   <div className="mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                      <GraduationCap className="w-10 h-10 text-white" />
+                    <div className="w-full h-48 bg-cover bg-center rounded-lg mb-4" style={{
+                      backgroundImage: "url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop&crop=center')"
+                    }}>
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors">Industry-Recognized Certifications</h3>
@@ -230,8 +280,9 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
                   <div className="mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                      <Wrench className="w-10 h-10 text-white" />
+                    <div className="w-full h-48 bg-cover bg-center rounded-lg mb-4" style={{
+                      backgroundImage: "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop&crop=center')"
+                    }}>
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-green-600 transition-colors">Certification-Focused Learning</h3>
@@ -243,8 +294,9 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
                   <div className="mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                      <Users className="w-10 h-10 text-white" />
+                    <div className="w-full h-48 bg-cover bg-center rounded-lg mb-4" style={{
+                      backgroundImage: "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=300&fit=crop&crop=center')"
+                    }}>
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-purple-600 transition-colors">Certified Professional Network</h3>
@@ -257,11 +309,91 @@ const Home = () => {
         
         {/* Our Impact Section */}
         <section className="py-16 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 relative overflow-hidden">
-          {/* Background decorative elements */}
+          {/* Enhanced Background decorative elements with animations */}
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-20 left-20 w-36 h-36 bg-emerald-200/20 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-20 right-20 w-44 h-44 bg-teal-200/20 rounded-full blur-2xl"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-cyan-200/20 rounded-full blur-2xl"></div>
+            <div className="absolute top-20 left-20 w-36 h-36 bg-emerald-200/20 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-44 h-44 bg-teal-200/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-cyan-200/20 rounded-full blur-2xl animate-pulse delay-500"></div>
+            
+            {/* Success Achievement Illustration */}
+            <div className="absolute top-20 right-20 w-32 h-32 opacity-20 animate-float">
+              <svg viewBox="0 0 200 200" className="w-full h-full">
+                <defs>
+                  <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{stopColor:"#10b981", stopOpacity:0.8}} />
+                    <stop offset="100%" style={{stopColor:"#059669", stopOpacity:0.6}} />
+                  </linearGradient>
+                </defs>
+                {/* Background */}
+                <rect width="200" height="200" fill="#a7f3d0" rx="20"/>
+                
+                {/* Steps */}
+                <rect x="20" y="140" width="40" height="20" fill="#1f2937" rx="2"/>
+                <rect x="15" y="135" width="10" height="5" fill="#ffffff" opacity="0.7"/>
+                <rect x="25" y="135" width="10" height="5" fill="#ffffff" opacity="0.7"/>
+                <rect x="35" y="135" width="10" height="5" fill="#ffffff" opacity="0.7"/>
+                
+                <rect x="50" y="120" width="40" height="20" fill="#ffffff" rx="2"/>
+                <circle cx="60" cy="130" r="3" fill="#1f2937"/>
+                <circle cx="70" cy="130" r="3" fill="#1f2937"/>
+                <circle cx="80" cy="130" r="3" fill="#1f2937"/>
+                
+                <rect x="80" y="100" width="40" height="20" fill="#1f2937" rx="2"/>
+                
+                <rect x="110" y="80" width="40" height="20" fill="#ffffff" rx="2"/>
+                <rect x="115" y="85" width="30" height="2" fill="#1f2937"/>
+                <rect x="115" y="90" width="30" height="2" fill="#1f2937"/>
+                <rect x="115" y="95" width="30" height="2" fill="#1f2937"/>
+                
+                {/* Person */}
+                <circle cx="130" cy="60" r="12" fill="#ffffff" stroke="#1f2937" strokeWidth="2"/>
+                <circle cx="127" cy="57" r="2" fill="#1f2937"/>
+                <circle cx="133" cy="57" r="2" fill="#1f2937"/>
+                <path d="M125 65 Q130 68 135 65" stroke="#1f2937" strokeWidth="2" fill="none"/>
+                <path d="M120 70 Q130 75 140 70" stroke="#1f2937" strokeWidth="2" fill="none"/>
+                
+                {/* Body */}
+                <rect x="125" y="72" width="10" height="15" fill="#ffffff" stroke="#1f2937" strokeWidth="2"/>
+                <rect x="120" y="87" width="20" height="8" fill="#1f2937" rx="2"/>
+                <rect x="120" y="95" width="20" height="12" fill="#6b7280" rx="2"/>
+                
+                {/* Flag */}
+                <rect x="140" y="50" width="15" height="10" fill="#1f2937"/>
+                <path d="M140 50 Q145 52 150 50" stroke="#ffffff" strokeWidth="1" fill="none"/>
+                <line x1="140" y1="50" x2="140" y2="70" stroke="#1f2937" strokeWidth="2"/>
+                
+                {/* Clouds */}
+                <ellipse cx="40" cy="40" rx="15" ry="8" fill="#ffffff" opacity="0.8"/>
+                <ellipse cx="50" cy="35" rx="12" ry="6" fill="#ffffff" opacity="0.8"/>
+                <ellipse cx="45" cy="45" rx="10" ry="5" fill="#ffffff" opacity="0.8"/>
+                
+                <ellipse cx="160" cy="30" rx="12" ry="6" fill="#ffffff" opacity="0.8"/>
+                <ellipse cx="170" cy="25" rx="10" ry="5" fill="#ffffff" opacity="0.8"/>
+                <ellipse cx="165" cy="35" rx="8" ry="4" fill="#ffffff" opacity="0.8"/>
+              </svg>
+            </div>
+            
+            {/* Floating success icons */}
+            <div className="absolute top-24 right-24 animate-bounce delay-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-xl">
+                <span className="text-white text-2xl">🏆</span>
+              </div>
+            </div>
+            <div className="absolute bottom-24 left-24 animate-bounce delay-700">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
+                <span className="text-white text-2xl">📊</span>
+              </div>
+            </div>
+            <div className="absolute top-1/3 left-12 animate-bounce delay-1000">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-xl">🎯</span>
+              </div>
+            </div>
+            
+            {/* Animated success elements */}
+            <div className="absolute top-1/4 right-1/4 w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-ping delay-200"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-8 h-8 bg-gradient-to-r from-teal-400 to-cyan-500 rotate-45 animate-spin" style={{animationDuration: '7s'}}></div>
+            <div className="absolute top-2/3 right-1/3 w-6 h-6 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full animate-pulse delay-500"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
@@ -278,6 +410,10 @@ const Home = () => {
               <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 p-8">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
+                  <div className="w-full h-32 bg-cover bg-center rounded-lg mb-4" style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&h=200&fit=crop&crop=center')"
+                  }}>
+                  </div>
                   <div className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">10,000+</div>
                   <div className="text-gray-600 font-medium">Students Enrolled</div>
                   <div className="w-12 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mx-auto mt-3"></div>
@@ -287,6 +423,10 @@ const Home = () => {
               <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 p-8">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
+                  <div className="w-full h-32 bg-cover bg-center rounded-lg mb-4" style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=200&fit=crop&crop=center')"
+                  }}>
+                  </div>
                   <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">500+</div>
                   <div className="text-gray-600 font-medium">Expert Instructors</div>
                   <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto mt-3"></div>
@@ -296,6 +436,10 @@ const Home = () => {
               <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 p-8">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
+                  <div className="w-full h-32 bg-cover bg-center rounded-lg mb-4" style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=300&h=200&fit=crop&crop=center')"
+                  }}>
+                  </div>
                   <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">200+</div>
                   <div className="text-gray-600 font-medium">Courses Available</div>
                   <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mt-3"></div>
@@ -305,6 +449,10 @@ const Home = () => {
               <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 p-8">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
+                  <div className="w-full h-32 bg-cover bg-center rounded-lg mb-4" style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=300&h=200&fit=crop&crop=center')"
+                  }}>
+                  </div>
                   <div className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-2">95%</div>
                   <div className="text-gray-600 font-medium">Completion Rate</div>
                   <div className="w-12 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mx-auto mt-3"></div>
@@ -314,158 +462,36 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Featured Instructors Section */}
-        <section className="py-16 bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50 relative overflow-hidden">
-          {/* Background decorative elements */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-200/20 rounded-full blur-2xl"></div>
-            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-indigo-200/20 rounded-full blur-2xl"></div>
-          </div>
-          
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-600 via-gray-600 to-zinc-600 bg-clip-text text-transparent mb-4">
-                Meet Our Expert Instructors
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Learn from industry veterans and certified professionals
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Instructor 1 */}
-              <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center p-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative">
-                  <div className="mb-6">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto shadow-lg border-4 border-white">
-                      R
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">Rahul</h3>
-                  <p className="text-blue-600 font-medium mb-4">Technology & Emerging Tech Expert</p>
-                  <div className="flex flex-wrap justify-center gap-2 mb-4">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium">AI & Arts</span>
-                    <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full font-medium">AR/VR Engineering</span>
-                    <span className="px-3 py-1 bg-cyan-100 text-cyan-800 text-xs rounded-full font-medium">Web Development</span>
-                  </div>
-                  <div className="flex items-center justify-center mb-4">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-600 ml-2">4.9 (2,340 students)</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                    8+ years experience at Google, Facebook. Expert in React, Node.js, and modern web development.
-                  </p>
-                  <div className="flex items-center justify-center gap-6 text-xs text-gray-500">
-                    <div className="flex items-center">
-                      <Award className="w-4 h-4 mr-1" />
-                      12 Courses
-                    </div>
-                    <div className="flex items-center">
-                      <BookOpen className="w-4 h-4 mr-1" />
-                      5 Years
-                    </div>
-                    </div>
-                  </div>
-                </Card>
-
-              {/* Instructor 2 */}
-              <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center p-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative">
-                  <div className="mb-6">
-                    <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto shadow-lg border-4 border-white">
-                      H
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">Harish</h3>
-                  <p className="text-green-600 font-medium mb-4">AI & Healthcare Specialist</p>
-                  <div className="flex flex-wrap justify-center gap-2 mb-4">
-                    <span className="px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full font-medium">AI & Designing</span>
-                    <span className="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs rounded-full font-medium">Data Analytics</span>
-                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full font-medium">Medical Coding</span>
-                    <span className="px-3 py-1 bg-lime-100 text-lime-800 text-xs rounded-full font-medium">Bioentrepreneurship</span>
-                  </div>
-                  <div className="flex items-center justify-center mb-4">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-600 ml-2">4.8 (1,890 students)</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                    PhD in Machine Learning, 10+ years at Microsoft. Specializes in Python, ML, and AI applications.
-                  </p>
-                  <div className="flex items-center justify-center gap-6 text-xs text-gray-500">
-                    <div className="flex items-center">
-                      <Award className="w-4 h-4 mr-1" />
-                      8 Courses
-                    </div>
-                    <div className="flex items-center">
-                      <BookOpen className="w-4 h-4 mr-1" />
-                      6 Years
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Instructor 3 */}
-              <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center p-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative">
-                  <div className="mb-6">
-                    <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto shadow-lg border-4 border-white">
-                      S
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">Sathya</h3>
-                  <p className="text-purple-600 font-medium mb-4">Business & Agriculture Expert</p>
-                  <div className="flex flex-wrap justify-center gap-2 mb-4">
-                    <span className="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">AI & Business</span>
-                    <span className="px-3 py-1 bg-cyan-100 text-cyan-800 text-xs rounded-full font-medium">AR/VR Engineering</span>
-                    <span className="px-3 py-1 bg-pink-100 text-pink-800 text-xs rounded-full font-medium">Digital Marketing</span>
-                    <span className="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full font-medium">Agri Entrepreneurship</span>
-                  </div>
-                  <div className="flex items-center justify-center mb-4">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-600 ml-2">4.7 (1,650 students)</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                    Former Marketing Director at Apple. Expert in SEO, SEM, social media, and growth marketing strategies.
-                  </p>
-                  <div className="flex items-center justify-center gap-6 text-xs text-gray-500">
-                    <div className="flex items-center">
-                      <Award className="w-4 h-4 mr-1" />
-                      6 Courses
-                    </div>
-                    <div className="flex items-center">
-                      <BookOpen className="w-4 h-4 mr-1" />
-                      4 Years
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </section>
 
         {/* Testimonials Section */}
         <section className="py-16 bg-gradient-to-br from-rose-50 via-pink-50 to-orange-50 relative overflow-hidden">
-          {/* Background decorative elements */}
+          {/* Enhanced Background decorative elements with animations */}
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-20 right-20 w-36 h-36 bg-rose-200/20 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-20 left-20 w-40 h-40 bg-pink-200/20 rounded-full blur-2xl"></div>
-            <div className="absolute top-1/2 right-1/3 w-28 h-28 bg-orange-200/20 rounded-full blur-2xl"></div>
+            <div className="absolute top-20 right-20 w-36 h-36 bg-rose-200/20 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute bottom-20 left-20 w-40 h-40 bg-pink-200/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 right-1/3 w-28 h-28 bg-orange-200/20 rounded-full blur-2xl animate-pulse delay-500"></div>
+            
+            {/* Floating testimonial icons */}
+            <div className="absolute top-24 left-20 animate-bounce delay-500">
+              <div className="w-16 h-16 bg-gradient-to-r from-rose-500 to-pink-600 rounded-full flex items-center justify-center shadow-xl">
+                <span className="text-white text-2xl">💬</span>
+              </div>
+            </div>
+            <div className="absolute bottom-24 right-20 animate-bounce delay-900">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-xl">
+                <span className="text-white text-2xl">⭐</span>
+              </div>
+            </div>
+            <div className="absolute top-1/3 left-8 animate-bounce delay-1300">
+              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-600 rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-xl">❤️</span>
+              </div>
+            </div>
+            
+            {/* Animated testimonial elements */}
+            <div className="absolute top-1/4 right-1/4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-ping delay-400"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-gradient-to-r from-pink-400 to-rose-500 rotate-45 animate-spin" style={{animationDuration: '6s'}}></div>
+            <div className="absolute top-2/3 right-1/3 w-4 h-4 bg-gradient-to-r from-orange-400 to-red-500 rounded-full animate-pulse delay-800"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -479,7 +505,7 @@ const Home = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Testimonial 1 */}
+                {/* Testimonial 1 */}
               <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 p-8">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
@@ -502,9 +528,9 @@ const Home = () => {
                       <p className="font-semibold text-gray-800">Priya Sharma</p>
                       <p className="text-sm text-gray-500">Medical Coder</p>
                     </div>
+                    </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
 
               {/* Testimonial 2 */}
               <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 p-8">
@@ -529,9 +555,9 @@ const Home = () => {
                       <p className="font-semibold text-gray-800">Arjun Patel</p>
                       <p className="text-sm text-gray-500">Blockchain Developer</p>
                     </div>
+                    </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
 
               {/* Testimonial 3 */}
               <Card className="group relative overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 p-8">
@@ -556,10 +582,10 @@ const Home = () => {
                       <p className="font-semibold text-gray-800">Rajesh Kumar</p>
                       <p className="text-sm text-gray-500">Agri-Entrepreneur</p>
                     </div>
+                    </div>
                   </div>
-                </div>
-              </Card>
-            </div>
+                </Card>
+              </div>
           </div>
         </section>
 

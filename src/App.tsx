@@ -19,13 +19,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/instructors" element={<Instructors />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home key="home" />} />
+          <Route path="/about" element={<About key="about" />} />
+          <Route path="/courses" element={<Courses key="courses" />} />
+          <Route path="/instructors" element={<Instructors key="instructors" />} />
+          <Route path="/contact" element={<Contact key="contact" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound key="notfound" />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

@@ -4,9 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, Star, ChevronRight, TrendingUp, Award } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Courses = () => {
+  useEffect(() => {
+    // Force scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
   const [selectedCategory, setSelectedCategory] = useState("All Courses");
   
 
@@ -341,7 +345,7 @@ const Courses = () => {
       <Navigation />
       <main>
         {/* Courses Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 pt-32 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Explore Our Courses</h2>

@@ -5,10 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, MessageSquare, Send } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  useEffect(() => {
+    // Force scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +25,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "Info@prolearn.in",
+      value: "prolearntraininginstitute@gmail.com",
       action: "Send Email",
     },
     {
@@ -59,7 +63,7 @@ const Contact = () => {
       <Navigation />
       <main>
         {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <section className="py-20 pt-32 bg-gradient-to-br from-blue-50 to-purple-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get in Touch</h2>

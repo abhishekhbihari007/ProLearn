@@ -111,7 +111,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Email**: Info@prolearn.in
+- **Email**: prolearntraininginstitute@gmail.com
 - **Phone**: +91 98765 43210
 - **Office**: Tech Park, Sector 5, Gurgaon, Haryana 122001
 

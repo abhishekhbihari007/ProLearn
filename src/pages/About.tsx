@@ -1,14 +1,19 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Target, Users, TrendingUp, Shield } from "lucide-react";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    // Force scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main>
         {/* About Section */}
-        <section className="py-20 bg-gradient-card">
+        <section className="py-20 pt-32 bg-gradient-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Prolearn</h2>
@@ -102,6 +107,7 @@ const About = () => {
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </div>
