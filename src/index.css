@@ -6,18 +6,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
+/* Custom animations are now defined in Tailwind config for better production support */
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
@@ -153,83 +142,40 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
+  /* Animation utilities are now defined in Tailwind config for better production support */
   
-  .animate-float-slow {
-    animation: float-slow 8s ease-in-out infinite;
-  }
-  
-  .animate-float-fast {
-    animation: float-fast 4s ease-in-out infinite;
-  }
-  
-  .animate-glow {
-    animation: glow 3s ease-in-out infinite alternate;
-  }
-  
+  /* Performance optimizations for animations */
+  .animate-float,
+  .animate-float-slow,
+  .animate-float-fast,
+  .animate-glow,
   .animate-drift {
-    animation: drift 12s ease-in-out infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
   
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px) translateX(0px);
-    }
-    25% {
-      transform: translateY(-10px) translateX(5px);
-    }
-    50% {
-      transform: translateY(-5px) translateX(-5px);
-    }
-    75% {
-      transform: translateY(-15px) translateX(3px);
-    }
-  }
-  
-  @keyframes float-slow {
-    0%, 100% {
-      transform: translateY(0px) translateX(0px) rotate(0deg);
-    }
-    33% {
-      transform: translateY(-15px) translateX(8px) rotate(2deg);
-    }
-    66% {
-      transform: translateY(-8px) translateX(-6px) rotate(-1deg);
+  /* Reduce animations on mobile for better performance */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-float-slow,
+    .animate-float-fast,
+    .animate-glow,
+    .animate-drift,
+    .animate-bounce,
+    .animate-pulse,
+    .animate-spin,
+    .animate-ping {
+      animation: none !important;
     }
   }
   
-  @keyframes float-fast {
-    0%, 100% {
-      transform: translateY(0px) translateX(0px) scale(1);
-    }
-    50% {
-      transform: translateY(-20px) translateX(10px) scale(1.05);
-    }
-  }
-  
-  @keyframes glow {
-    0% {
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-    }
-    100% {
-      box-shadow: 0 0 40px rgba(59, 130, 246, 0.6), 0 0 60px rgba(147, 51, 234, 0.3);
-    }
-  }
-  
-  @keyframes drift {
-    0%, 100% {
-      transform: translateX(0px) translateY(0px);
-    }
-    25% {
-      transform: translateX(20px) translateY(-10px);
-    }
-    50% {
-      transform: translateX(-10px) translateY(-20px);
-    }
-    75% {
-      transform: translateX(-20px) translateY(-5px);
+  /* Optimize for mobile devices */
+  @media (max-width: 768px) {
+    .animate-float,
+    .animate-float-slow,
+    .animate-float-fast {
+      animation-duration: 8s !important;
     }
   }
 }

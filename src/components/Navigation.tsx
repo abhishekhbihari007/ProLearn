@@ -16,7 +16,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-white shadow-sm border-b border-gray-200 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24 py-2">
           {/* Logo */}
@@ -24,11 +24,15 @@ const Navigation = () => {
             <img 
               src="/PROLEARN.png" 
               alt="ProLearn Logo" 
-              className="h-24 w-auto object-contain filter-none bg-transparent"
+              className="h-36 w-auto object-contain filter-none bg-transparent"
               style={{ backgroundColor: 'transparent' }}
               onError={(e) => {
-                e.currentTarget.style.display = 'none';
-                e.currentTarget.nextElementSibling.style.display = 'flex';
+                const target = e.currentTarget;
+                const fallback = target.nextElementSibling as HTMLElement;
+                if (target && fallback) {
+                  target.style.display = 'none';
+                  fallback.style.display = 'flex';
+                }
               }}
             />
             <div className="hidden items-center gap-2">

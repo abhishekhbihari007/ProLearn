@@ -228,7 +228,7 @@ const Courses = () => {
     {
       title: "Digital Marketing Strategy",
       instructor: "Dr. Priya Sharma",
-      category: "Agriculture",
+      category: "Business",
       level: "Advanced",
       duration: "4 months",
       students: 3200,
@@ -242,7 +242,7 @@ const Courses = () => {
     {
       title: "Social Media Marketing",
       instructor: "Vikram Singh",
-      category: "Agriculture",
+      category: "Business",
       level: "Advanced",
       duration: "6 months",
       students: 2850,
@@ -256,7 +256,7 @@ const Courses = () => {
     {
       title: "Marketing Analytics",
       instructor: "Dr. Ananya Gupta",
-      category: "Agriculture",
+      category: "Business",
       level: "Advanced",
       duration: "6 months",
       students: 2450,

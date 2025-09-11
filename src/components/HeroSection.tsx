@@ -44,16 +44,16 @@ const HeroSection = () => {
 
       {/* Animated Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating Circles */}
-        <div className="absolute top-20 left-10 w-16 h-16 bg-blue-400/20 rounded-full animate-bounce delay-1000"></div>
-        <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-full animate-bounce delay-2000"></div>
-        <div className="absolute bottom-32 left-20 w-20 h-20 bg-indigo-400/20 rounded-full animate-bounce delay-3000"></div>
-        <div className="absolute bottom-20 right-10 w-14 h-14 bg-cyan-400/20 rounded-full animate-bounce delay-1000"></div>
+        {/* Floating Circles - Optimized for performance */}
+        <div className="absolute top-20 left-10 w-16 h-16 bg-blue-400/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-full animate-float-slow" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-32 left-20 w-20 h-20 bg-indigo-400/20 rounded-full animate-float" style={{animationDelay: '3s'}}></div>
+        <div className="absolute bottom-20 right-10 w-14 h-14 bg-cyan-400/20 rounded-full animate-float-slow" style={{animationDelay: '1s'}}></div>
         
-        {/* Floating Geometric Shapes */}
+        {/* Floating Geometric Shapes - Optimized */}
         <div className="absolute top-32 right-32 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rotate-45 animate-spin" style={{animationDuration: '8s'}}></div>
         <div className="absolute bottom-40 left-32 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-600 rotate-12 animate-spin" style={{animationDuration: '6s'}}></div>
-        <div className="absolute top-60 left-1/4 w-10 h-10 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-full animate-pulse"></div>
+        <div className="absolute top-60 left-1/4 w-10 h-10 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-full animate-pulse" style={{animationDuration: '3s'}}></div>
         
         {/* Running Swiggles */}
         <div className="absolute top-1/4 left-0 w-32 h-32 opacity-20">
@@ -77,8 +77,8 @@ const HeroSection = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           {/* Large Container with Text and Image */}
-          <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 border border-blue-300/50 shadow-2xl ring-1 ring-blue-200/50">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+          <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 border border-blue-300/50 shadow-2xl ring-1 ring-blue-200/50">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               
               {/* Left Side - Text Content */}
               <div className="order-2 lg:order-1">
@@ -101,9 +101,10 @@ const HeroSection = () => {
                   {stats.map((stat, index) => (
                     <div
                       key={index}
-                      className={`transition-all duration-700 delay-${index * 200} ${
+                      className={`transition-all duration-700 ${
                         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                       }`}
+                      style={{ transitionDelay: `${index * 200}ms` }}
                     >
                       <div className="flex flex-col items-center gap-1 sm:gap-2 p-2 sm:p-3">
                         <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-lg">

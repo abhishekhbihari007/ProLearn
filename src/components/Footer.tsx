@@ -18,62 +18,65 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Top Section: Prolearn Branding */}
-        <div className="mb-8">
-          <div className="flex items-center gap-2 mb-2">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg shadow-lg">
-              <GraduationCap className="h-5 w-5 text-white" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
+          {/* Prolearn Branding - Takes up 2 columns */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 rounded-xl shadow-lg">
+                <GraduationCap className="h-6 w-6 text-white" />
+              </div>
+              <span className="text-2xl font-bold text-white">Prolearn</span>
             </div>
-            <span className="text-lg font-bold text-white">Prolearn</span>
+            <p className="text-slate-300 text-base mb-6 leading-relaxed max-w-md">
+              Empowering learners worldwide with expert knowledge and practical skills.
+            </p>
+            <div className="flex gap-3">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="p-3 rounded-xl bg-blue-600 hover:bg-purple-600 text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
-          <p className="text-slate-300 text-xs mb-2 leading-relaxed">
-            Empowering learners worldwide with expert knowledge and practical skills.
-          </p>
-          <div className="flex gap-2">
-            {socialLinks.map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                className="p-2 rounded-lg bg-blue-600 hover:bg-purple-600 text-white transition-all duration-300 transform hover:scale-110"
-              >
-                <social.icon className="h-4 w-4" />
-              </a>
+
+          {/* Footer Links - Takes up 3 columns */}
+          <div className="lg:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-6">
+            {Object.entries(footerLinks).map(([category, links]) => (
+              <div key={category}>
+                <h4 className="font-semibold text-white mb-4 text-lg">{category}</h4>
+                <ul className="space-y-3">
+                  {links.map((link) => (
+                    <li key={link}>
+                      <a
+                        href="#"
+                        className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-4 gap-6 mb-6">
-          {/* Footer Links */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="font-semibold text-white mb-3 text-base">{category}</h4>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-sm text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-slate-700">
-          <div className="flex flex-row justify-center items-center gap-6">
-            <p className="text-sm text-white">
+        <div className="pt-8 border-t border-slate-700">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-base text-slate-400">
               © 2025 Prolearn. All rights reserved.
             </p>
-            <div className="flex gap-4 text-sm text-white">
-              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Privacy</a>
-              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Terms</a>
+            <div className="flex gap-6 text-base text-slate-400">
+              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Privacy Policy</a>
+              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Terms of Service</a>
+              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Cookie Policy</a>
             </div>
           </div>
         </div>
