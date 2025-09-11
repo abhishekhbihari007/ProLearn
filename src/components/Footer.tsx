@@ -1,19 +1,20 @@
 import { Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
-import ProLearnLogo from "/PROLEARN.png";
+import { Link } from "react-router-dom";
+import ProLearnLogo from "/PROLEARN.png"; 
 
 const Footer = () => {
   const footerLinks = {
-    Platform: ["About Us", "How It Works", "Pricing", "Success Stories"],
-    Learn: ["Browse Courses", "Categories", "Certificates", "Scholarships"],
-    Teach: ["Become Instructor", "Teaching Guide", "Instructor Dashboard", "Resources"],
-    Support: ["Help Center", "Contact Us", "Privacy Policy", "Terms of Service"],
+    Platform: ["Home", "Courses", "Instructors", "About", "Contact"],
+    Learn: ["Browse Courses", "Categories", "Certificates"],
+    Teach: ["Become Instructor", "Teaching Guide"],
+    Support: ["Contact Us", "Privacy Policy", "Terms of Service"],
   };
 
   const socialLinks = [
     { icon: Facebook, href: "#" },
     { icon: Twitter, href: "#" },
     { icon: Linkedin, href: "#" },
-    { icon: Youtube, href: "#" },
+    { icon: Youtube, href: "#" }, 
     { icon: Instagram, href: "#" },
   ];
 
@@ -61,12 +62,84 @@ const Footer = () => {
                 <ul className="space-y-3">
                   {links.map((link) => (
                     <li key={link}>
-                      <a
-                        href="#"
-                        className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
-                      >
-                        {link}
-                      </a>
+                      {link === "Become Instructor" ? (
+                        <Link
+                          to="/become-instructor"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : link === "Home" ? (
+                        <Link
+                          to="/"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : link === "Courses" ? (
+                        <Link
+                          to="/courses"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : link === "Instructors" ? (
+                        <Link
+                          to="/instructors"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : link === "About" ? (
+                        <Link
+                          to="/about"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : link === "Contact" ? (
+                        <Link
+                          to="/contact"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : link === "Browse Courses" || link === "Categories" || link === "Certificates" ? (
+                        <Link
+                          to="/courses"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : link === "Contact Us" ? (
+                        <Link
+                          to="/contact"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : link === "Privacy Policy" ? (
+                        <Link
+                          to="/privacy-policy"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : link === "Terms of Service" ? (
+                        <Link
+                          to="/terms-of-service"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </Link>
+                      ) : (
+                        <a
+                          href="#"
+                          className="text-base text-slate-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                        >
+                          {link}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -82,9 +155,8 @@ const Footer = () => {
               © 2025 Prolearn. All rights reserved.
             </p>
             <div className="flex gap-6 text-base text-slate-400">
-              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Privacy Policy</a>
-              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Terms of Service</a>
-              <a href="#" className="hover:text-blue-400 transition-colors duration-300">Cookie Policy</a>
+              <Link to="/privacy-policy" className="hover:text-blue-400 transition-colors duration-300">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-blue-400 transition-colors duration-300">Terms of Service</Link>
             </div>
           </div>
         </div>

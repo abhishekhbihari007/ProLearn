@@ -13,6 +13,8 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import InstructorApplication from "./pages/InstructorApplication";
 import Checkout from "./pages/Checkout";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +36,8 @@ const App = () => (
             <Route path="/signup" element={<SignUp key="signup" />} />
             <Route path="/become-instructor" element={<InstructorApplication key="instructor-application" />} />
             <Route path="/checkout" element={<Checkout key="checkout" />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy key="privacy-policy" />} />
+            <Route path="/terms-of-service" element={<TermsOfService key="terms-of-service" />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound key="notfound" />} />
           </Routes>
