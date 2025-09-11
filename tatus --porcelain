@@ -1,0 +1,5 @@
+[33m777ab1ce[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update components and styling
+[33me52d2873[m Update components and styling - improved navigation, hero section, footer, and page layouts
+[33m0a2536d3[m Major UI/UX improvements: Enhanced hero section, fixed navigation, updated instructor images, improved mobile responsiveness
+[33ma5ee07c8[m Enhanced Home page with educational background and updated course details - Added educational classroom background to hero section - Updated featured courses with real images and accurate pricing - Changed stats from 500+ to 100+ expert courses - Improved visual design with better colors and gradients - Fixed SVG encoding issues for better browser compatibility
+[33m85b6c5ea[m Update project components and pages - Updated Footer, HeroSection, Courses, Home pages and Vite config

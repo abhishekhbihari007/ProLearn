@@ -3,12 +3,15 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 interface User {
   email: string;
   isAuthenticated: boolean;
+  enrolledCourses?: string[];
 }
 
 interface AuthContextType {
   user: User | null;
   signIn: (email: string, password: string) => Promise<boolean>;
   signOut: () => void;
+  enrollInCourse: (courseTitle: string) => Promise<boolean>;
+  isEnrolled: (courseTitle: string) => boolean;
   isLoading: boolean;
 }
 
@@ -55,7 +58,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       // For demo purposes, accept any email/password combination
       // In a real app, you would validate against your backend
       if (email && password) {
-        const userData: User = { email, isAuthenticated: true };
+        const userData: User = { email, isAuthenticated: true, enrolledCourses: [] };
         setUser(userData);
         localStorage.setItem('user', JSON.stringify(userData));
         setIsLoading(false);
@@ -76,10 +79,37 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     localStorage.removeItem('user');
   };
 
+  const enrollInCourse = async (courseTitle: string): Promise<boolean> => {
+    if (!user) {
+      return false;
+    }
+
+    try {
+      // Instant enrollment - no delay
+      const updatedUser = {
+        ...user,
+        enrolledCourses: [...(user.enrolledCourses || []), courseTitle]
+      };
+      
+      setUser(updatedUser);
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+      return true;
+    } catch (error) {
+      console.error('Enrollment error:', error);
+      return false;
+    }
+  };
+
+  const isEnrolled = (courseTitle: string): boolean => {
+    return user?.enrolledCourses?.includes(courseTitle) || false;
+  };
+
   const value: AuthContextType = {
     user,
     signIn,
     signOut,
+    enrollInCourse,
+    isEnrolled,
     isLoading,
   };
 

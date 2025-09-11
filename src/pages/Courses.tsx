@@ -3,15 +3,47 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Star, ChevronRight, TrendingUp, Award } from "lucide-react";
+import { Clock, Users, Star, ChevronRight, TrendingUp, Award, CheckCircle, AlertCircle } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useAuth } from "@/contexts/AuthContext";
+import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 const Courses = () => {
+  const { user, enrollInCourse, isEnrolled } = useAuth();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Force scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
+  
   const [selectedCategory, setSelectedCategory] = useState("All Courses");
+
+  const handleEnroll = (course: any) => {
+    if (!user) {
+      toast({
+        title: "Sign In Required",
+        description: "Please sign in to enroll in courses.",
+        variant: "destructive",
+      });
+      navigate("/signin");
+      return;
+    }
+
+    if (isEnrolled(course.title)) {
+      toast({
+        title: "Already Enrolled",
+        description: "You are already enrolled in this course.",
+        variant: "default",
+      });
+      return;
+    }
+
+    // Navigate to checkout with course data
+    navigate("/checkout", { state: { course } });
+  };
   
 
   const featuredCourses = [
@@ -424,10 +456,21 @@ const Courses = () => {
 
                   <CardFooter className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-primary">{course.price}</span>
-                    <Button variant="primary" className="group">
-                      Enroll Now
-                      <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    {isEnrolled(course.title) ? (
+                      <Button variant="outline" className="group" disabled>
+                        <CheckCircle className="mr-2 h-4 w-4 text-green-600" />
+                        Enrolled
+                      </Button>
+                    ) : (
+                      <Button 
+                        variant="primary" 
+                        className="group"
+                        onClick={() => handleEnroll(course)}
+                      >
+                        Enroll Now
+                        <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    )}
                   </CardFooter>
                 </Card>
               ))}
