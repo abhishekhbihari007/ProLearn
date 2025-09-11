@@ -15,7 +15,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-[75vh] flex items-center justify-center pt-12 overflow-hidden w-full">
+     <section id="home" className="relative min-h-[75vh] flex items-center justify-center pt-12 overflow-hidden w-full">
       {/* Enhanced Background Pattern with SVG Graphics - Full Screen Coverage */}
       <div className="absolute top-0 left-0 h-full opacity-100 z-[-1]" style={{width: '100vw', left: '50%', transform: 'translateX(-50%)', minWidth: '100vw'}}>
         {/* Animated Background Elements */}
@@ -161,7 +161,7 @@ const HeroSection = () => {
         </svg>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 z-10">
+      <div className="relative max-w-[88.4rem] mx-auto px-4 sm:px-6 lg:px-8 py-6 z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           {/* Main Content Card */}

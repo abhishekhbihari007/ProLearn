@@ -1,11 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { GraduationCap, Menu, X, User, LogOut } from "lucide-react";
 import { useState } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { user, signOut } = useAuth();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -65,8 +67,32 @@ const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button className="bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
-            <Button variant="hero" className="font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
+            {user ? (
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <User className="h-4 w-4" />
+                  <span className="font-medium">{user.email}</span>
+                </div>
+                <Button 
+                  onClick={signOut}
+                  variant="outline" 
+                  size="sm"
+                  className="text-gray-600 hover:text-gray-800"
+                >
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Sign Out
+                </Button>
+              </div>
+            ) : (
+              <>
+                <Link to="/signin">
+                  <Button className="bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
+                </Link>
+                  <Link to="/signup">
+                    <Button variant="hero" className="font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
+                  </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -100,8 +126,34 @@ const Navigation = () => {
                 );
               })}
               <div className="flex flex-col gap-2 px-4 pt-4 border-t border-border">
-                <Button className="w-full bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
-                <Button variant="hero" className="w-full font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
+                {user ? (
+                  <>
+                    <div className="flex items-center gap-2 text-sm text-gray-600 px-4 py-2">
+                      <User className="h-4 w-4" />
+                      <span className="font-medium">{user.email}</span>
+                    </div>
+                    <Button 
+                      onClick={() => {
+                        signOut();
+                        setIsMenuOpen(false);
+                      }}
+                      variant="outline" 
+                      className="w-full text-gray-600 hover:text-gray-800"
+                    >
+                      <LogOut className="h-4 w-4 mr-2" />
+                      Sign Out
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/signin" onClick={() => setIsMenuOpen(false)}>
+                      <Button className="w-full bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
+                    </Link>
+                        <Link to="/signup" onClick={() => setIsMenuOpen(false)}>
+                          <Button variant="hero" className="w-full font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
+                        </Link>
+                  </>
+                )}
               </div>
             </div>
           </div>

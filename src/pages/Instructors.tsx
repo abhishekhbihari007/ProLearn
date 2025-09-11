@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Instructors = () => {
   useEffect(() => {
@@ -358,9 +359,11 @@ const Instructors = () => {
               </div>
               
               <div className="text-center mt-8">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                  Apply to Become an Instructor
-                </button>
+                <Link to="/become-instructor">
+                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    Apply to Become an Instructor
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
