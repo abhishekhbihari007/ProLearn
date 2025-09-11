@@ -18,64 +18,52 @@ const HeroSection = () => {
      <section id="home" className="relative min-h-[75vh] flex items-center justify-center pt-12 overflow-hidden w-full">
       {/* Enhanced Background Pattern with SVG Graphics - Full Screen Coverage */}
       <div className="absolute top-0 left-0 h-full opacity-100 z-[-1]" style={{width: '100vw', left: '50%', transform: 'translateX(-50%)', minWidth: '100vw'}}>
-        {/* Animated Background Elements */}
+        {/* Animated Background Elements - Responsive */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-          {/* Floating animated circles */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-200/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '1000ms'}}></div>
-          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-indigo-200/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '500ms'}}></div>
+          {/* Floating animated circles - Hidden on mobile */}
+          <div className="hidden md:block absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="hidden md:block absolute bottom-20 right-10 w-40 h-40 bg-purple-200/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '1000ms'}}></div>
+          <div className="hidden lg:block absolute top-1/2 left-1/4 w-24 h-24 bg-indigo-200/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '500ms'}}></div>
           
-          {/* Floating animated icons */}
-          <div className="absolute top-32 right-20 animate-float" style={{animationDelay: '300ms', animation: 'float 3s ease-in-out infinite'}}>
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-              <span className="text-white text-xl">💻</span>
+          {/* Floating animated icons - Reduced on mobile */}
+          <div className="hidden sm:block absolute top-32 right-20 animate-float" style={{animationDelay: '300ms', animation: 'float 3s ease-in-out infinite'}}>
+            <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+              <span className="text-white text-sm sm:text-xl">💻</span>
             </div>
           </div>
-          <div className="absolute bottom-32 left-20 animate-float-slow" style={{animationDelay: '700ms', animation: 'float-slow 4s ease-in-out infinite'}}>
+          <div className="hidden md:block absolute bottom-32 left-20 animate-float-slow" style={{animationDelay: '700ms', animation: 'float-slow 4s ease-in-out infinite'}}>
             <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg">
               <span className="text-white text-xl">🎓</span>
             </div>
           </div>
-          <div className="absolute top-1/3 right-1/3 animate-float" style={{animationDelay: '1000ms', animation: 'float 3s ease-in-out infinite'}}>
+          <div className="hidden lg:block absolute top-1/3 right-1/3 animate-float" style={{animationDelay: '1000ms', animation: 'float 3s ease-in-out infinite'}}>
             <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-lg">
               <span className="text-white text-lg">🚀</span>
             </div>
           </div>
           
-          {/* Animated geometric shapes */}
-          <div className="absolute top-40 left-1/3 w-6 h-6 bg-blue-400/30 rotate-45 animate-spin" style={{animationDuration: '8s'}}></div>
-          <div className="absolute bottom-40 right-1/3 w-8 h-8 bg-purple-400/30 rounded-full animate-ping" style={{animationDelay: '500ms'}}></div>
-          <div className="absolute top-1/4 right-1/4 w-4 h-4 bg-indigo-400/30 rotate-12 animate-bounce" style={{animationDelay: '1200ms'}}></div>
+          {/* Animated geometric shapes - Hidden on mobile */}
+          <div className="hidden md:block absolute top-40 left-1/3 w-6 h-6 bg-blue-400/30 rotate-45 animate-spin" style={{animationDuration: '8s'}}></div>
+          <div className="hidden lg:block absolute bottom-40 right-1/3 w-8 h-8 bg-purple-400/30 rounded-full animate-ping" style={{animationDelay: '500ms'}}></div>
+          <div className="hidden md:block absolute top-1/4 right-1/4 w-4 h-4 bg-indigo-400/30 rotate-12 animate-bounce" style={{animationDelay: '1200ms'}}></div>
           
-          {/* Additional floating elements */}
-          <div className="absolute top-1/2 right-10 w-16 h-16 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full animate-float-fast" style={{animationDelay: '1500ms', animation: 'float-fast 2s ease-in-out infinite'}}></div>
-          <div className="absolute bottom-1/3 left-1/2 w-12 h-12 bg-gradient-to-r from-pink-400/20 to-purple-500/20 rounded-full animate-float" style={{animationDelay: '2000ms', animation: 'float 3s ease-in-out infinite'}}></div>
+          {/* Additional floating elements - Hidden on mobile */}
+          <div className="hidden lg:block absolute top-1/2 right-10 w-16 h-16 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full animate-float-fast" style={{animationDelay: '1500ms', animation: 'float-fast 2s ease-in-out infinite'}}></div>
+          <div className="hidden lg:block absolute bottom-1/3 left-1/2 w-12 h-12 bg-gradient-to-r from-pink-400/20 to-purple-500/20 rounded-full animate-float" style={{animationDelay: '2000ms', animation: 'float 3s ease-in-out infinite'}}></div>
           
-          {/* Glowing elements */}
-          <div className="absolute top-16 left-1/2 w-20 h-20 bg-blue-500/10 rounded-full animate-glow" style={{animationDelay: '800ms', animation: 'glow 1.5s ease-in-out infinite alternate'}}></div>
-          <div className="absolute bottom-16 right-1/2 w-24 h-24 bg-purple-500/10 rounded-full animate-glow" style={{animationDelay: '1600ms', animation: 'glow 1.5s ease-in-out infinite alternate'}}></div>
+          {/* Glowing elements - Hidden on mobile */}
+          <div className="hidden md:block absolute top-16 left-1/2 w-20 h-20 bg-blue-500/10 rounded-full animate-glow" style={{animationDelay: '800ms', animation: 'glow 1.5s ease-in-out infinite alternate'}}></div>
+          <div className="hidden md:block absolute bottom-16 right-1/2 w-24 h-24 bg-purple-500/10 rounded-full animate-glow" style={{animationDelay: '1600ms', animation: 'glow 1.5s ease-in-out infinite alternate'}}></div>
           
-          {/* Small blinking and floating circles */}
-          <div className="absolute top-24 left-1/4 w-3 h-3 bg-blue-400/60 rounded-full animate-pulse animate-float" style={{animationDelay: '200ms'}}></div>
-          <div className="absolute top-40 right-1/3 w-2 h-2 bg-purple-400/50 rounded-full animate-pulse animate-float-slow" style={{animationDelay: '800ms'}}></div>
-          <div className="absolute bottom-32 left-1/3 w-4 h-4 bg-indigo-400/55 rounded-full animate-pulse animate-float" style={{animationDelay: '1200ms'}}></div>
-          <div className="absolute bottom-48 right-1/4 w-2.5 h-2.5 bg-pink-400/45 rounded-full animate-pulse animate-float-fast" style={{animationDelay: '600ms'}}></div>
-          <div className="absolute top-1/2 left-1/6 w-3.5 h-3.5 bg-cyan-400/50 rounded-full animate-pulse animate-float" style={{animationDelay: '1000ms'}}></div>
-          <div className="absolute top-1/3 right-1/6 w-2 h-2 bg-blue-500/60 rounded-full animate-pulse animate-float-slow" style={{animationDelay: '400ms'}}></div>
-          <div className="absolute bottom-1/4 left-2/3 w-3 h-3 bg-purple-500/55 rounded-full animate-pulse animate-float" style={{animationDelay: '1400ms'}}></div>
-          <div className="absolute top-2/3 right-2/3 w-2.5 h-2.5 bg-indigo-500/45 rounded-full animate-pulse animate-float-fast" style={{animationDelay: '1600ms'}}></div>
-          
-          {/* Additional blinking and floating circles with different sizes and colors */}
-          <div className="absolute top-16 left-1/8 w-1.5 h-1.5 bg-yellow-400/70 rounded-full animate-pulse animate-float" style={{animationDelay: '300ms'}}></div>
-          <div className="absolute top-56 right-1/8 w-5 h-5 bg-green-400/40 rounded-full animate-pulse animate-float-slow" style={{animationDelay: '1100ms'}}></div>
-          <div className="absolute bottom-16 left-1/5 w-1 h-1 bg-red-400/80 rounded-full animate-pulse animate-float-fast" style={{animationDelay: '700ms'}}></div>
-          <div className="absolute bottom-56 right-1/5 w-6 h-6 bg-orange-400/35 rounded-full animate-pulse animate-float" style={{animationDelay: '1300ms'}}></div>
-          <div className="absolute top-1/4 left-1/12 w-2.5 h-2.5 bg-teal-400/55 rounded-full animate-pulse animate-float-slow" style={{animationDelay: '500ms'}}></div>
-          <div className="absolute top-3/4 right-1/12 w-1.5 h-1.5 bg-lime-400/65 rounded-full animate-pulse animate-float" style={{animationDelay: '900ms'}}></div>
-          <div className="absolute bottom-1/3 left-1/4 w-4.5 h-4.5 bg-violet-400/45 rounded-full animate-pulse animate-float-fast" style={{animationDelay: '1500ms'}}></div>
-          <div className="absolute top-1/6 right-1/4 w-3.5 h-3.5 bg-amber-400/50 rounded-full animate-pulse animate-float" style={{animationDelay: '1700ms'}}></div>
-          <div className="absolute bottom-1/6 left-3/4 w-2 h-2 bg-emerald-400/60 rounded-full animate-pulse animate-float-slow" style={{animationDelay: '100ms'}}></div>
-          <div className="absolute top-5/6 right-3/4 w-4 h-4 bg-rose-400/40 rounded-full animate-pulse animate-float" style={{animationDelay: '1900ms'}}></div>
+          {/* Small blinking and floating circles - Reduced on mobile */}
+          <div className="hidden sm:block absolute top-24 left-1/4 w-2 h-2 sm:w-3 sm:h-3 bg-blue-400/60 rounded-full animate-pulse animate-float" style={{animationDelay: '200ms'}}></div>
+          <div className="hidden md:block absolute top-40 right-1/3 w-2 h-2 bg-purple-400/50 rounded-full animate-pulse animate-float-slow" style={{animationDelay: '800ms'}}></div>
+          <div className="hidden sm:block absolute bottom-32 left-1/3 w-3 h-3 sm:w-4 sm:h-4 bg-indigo-400/55 rounded-full animate-pulse animate-float" style={{animationDelay: '1200ms'}}></div>
+          <div className="hidden md:block absolute bottom-48 right-1/4 w-2.5 h-2.5 bg-pink-400/45 rounded-full animate-pulse animate-float-fast" style={{animationDelay: '600ms'}}></div>
+          <div className="hidden lg:block absolute top-1/2 left-1/6 w-3.5 h-3.5 bg-cyan-400/50 rounded-full animate-pulse animate-float" style={{animationDelay: '1000ms'}}></div>
+          <div className="hidden md:block absolute top-1/3 right-1/6 w-2 h-2 bg-blue-500/60 rounded-full animate-pulse animate-float-slow" style={{animationDelay: '400ms'}}></div>
+          <div className="hidden lg:block absolute bottom-1/4 left-2/3 w-3 h-3 bg-purple-500/55 rounded-full animate-pulse animate-float" style={{animationDelay: '1400ms'}}></div>
+          <div className="hidden lg:block absolute top-2/3 right-2/3 w-2.5 h-2.5 bg-indigo-500/45 rounded-full animate-pulse animate-float-fast" style={{animationDelay: '1600ms'}}></div>
         </div>
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
           <defs>
@@ -161,7 +149,7 @@ const HeroSection = () => {
         </svg>
       </div>
 
-      <div className="relative max-w-[88.4rem] mx-auto px-4 sm:px-6 lg:px-8 py-6 z-10">
+      <div className="relative max-w-[79.56rem] mx-auto px-4 sm:px-6 lg:px-8 py-6 z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           {/* Main Content Card */}
