@@ -65,8 +65,12 @@ const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button className="bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
-            <Button variant="hero" className="font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
+            <Link to="/signin">
+              <Button className="bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
+            </Link>
+            <Link to="/signup">
+              <Button variant="hero" className="font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -100,8 +104,12 @@ const Navigation = () => {
                 );
               })}
               <div className="flex flex-col gap-2 px-4 pt-4 border-t border-border">
-                <Button className="w-full bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
-                <Button variant="hero" className="w-full font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
+                <Link to="/signin" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
+                </Link>
+                <Link to="/signup" onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="hero" className="w-full font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
+                </Link>
               </div>
             </div>
           </div>

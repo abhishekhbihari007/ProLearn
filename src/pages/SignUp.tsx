@@ -27,7 +27,7 @@ const SignUp = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { signIn, isLoading } = useAuth();
+  const { signUp, isLoading } = useAuth();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -63,11 +63,7 @@ const SignUp = () => {
     }
 
     try {
-      // Simulate sign up process
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // For demo purposes, we'll sign them in after successful signup
-      const success = await signIn(formData.email, formData.password);
+      const success = await signUp(formData.email, formData.password, formData.firstName, formData.lastName);
 
       if (success) {
         toast({

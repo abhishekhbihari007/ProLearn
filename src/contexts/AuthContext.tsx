@@ -9,6 +9,7 @@ interface User {
 interface AuthContextType {
   user: User | null;
   signIn: (email: string, password: string) => Promise<boolean>;
+  signUp: (email: string, password: string, firstName: string, lastName: string) => Promise<boolean>;
   signOut: () => void;
   enrollInCourse: (courseTitle: string) => Promise<boolean>;
   isEnrolled: (courseTitle: string) => boolean;
@@ -74,6 +75,32 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
+  const signUp = async (email: string, password: string, firstName: string, lastName: string): Promise<boolean> => {
+    setIsLoading(true);
+    
+    try {
+      // Simulate API call - replace with actual registration logic
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      // For demo purposes, accept any valid email/password combination
+      // In a real app, you would validate and create user in your backend
+      if (email && password && firstName && lastName) {
+        const userData: User = { email, isAuthenticated: true, enrolledCourses: [] };
+        setUser(userData);
+        localStorage.setItem('user', JSON.stringify(userData));
+        setIsLoading(false);
+        return true;
+      }
+      
+      setIsLoading(false);
+      return false;
+    } catch (error) {
+      console.error('Sign up error:', error);
+      setIsLoading(false);
+      return false;
+    }
+  };
+
   const signOut = () => {
     setUser(null);
     localStorage.removeItem('user');
@@ -107,6 +134,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const value: AuthContextType = {
     user,
     signIn,
+    signUp,
     signOut,
     enrollInCourse,
     isEnrolled,
