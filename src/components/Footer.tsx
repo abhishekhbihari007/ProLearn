@@ -1,4 +1,5 @@
-import { GraduationCap, Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
+import ProLearnLogo from "/PROLEARN.png";
 
 const Footer = () => {
   const footerLinks = {
@@ -17,27 +18,34 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700 relative z-20">
+    <footer className="bg-slate-800 border-t border-slate-700 relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
           {/* Prolearn Branding - Takes up 2 columns */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 rounded-xl shadow-lg">
-                <GraduationCap className="h-6 w-6 text-white" />
+            <div className="flex items-start gap-4 mb-6">
+              <div className="bg-white p-4 rounded-lg shadow-lg">
+                <img 
+                  src={ProLearnLogo} 
+                  alt="ProLearn Logo" 
+                  className="h-20 w-auto object-contain"
+                  style={{ maxHeight: '80px' }}
+                />
               </div>
-              <span className="text-2xl font-bold text-white">Prolearn</span>
+              <div>
+                <h3 className="text-white font-bold text-2xl mb-3">Prolearn</h3>
+                <p className="text-slate-300 text-base leading-relaxed max-w-md">
+                  Empowering learners worldwide with expert knowledge and practical skills.
+                </p>
+              </div>
             </div>
-            <p className="text-slate-300 text-base mb-6 leading-relaxed max-w-md">
-              Empowering learners worldwide with expert knowledge and practical skills.
-            </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  className="p-3 rounded-xl bg-blue-600 hover:bg-purple-600 text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                  className="p-3 rounded-lg bg-white hover:bg-gray-100 text-blue-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex-shrink-0"
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
@@ -69,7 +77,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-700">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
             <p className="text-base text-slate-400">
               © 2025 Prolearn. All rights reserved.
             </p>
