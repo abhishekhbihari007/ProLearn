@@ -13,6 +13,13 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
   :root {
     /* Core Colors */
     --background: 0 0% 100%;
@@ -144,18 +151,72 @@ All colors MUST be HSL.
 @layer utilities {
   /* Animation utilities are now defined in Tailwind config for better production support */
   
+  /* Ensure animations work with inline keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    25% { transform: translateY(-10px) translateX(5px); }
+    50% { transform: translateY(-5px) translateX(-5px); }
+    75% { transform: translateY(-15px) translateX(3px); }
+  }
+  
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+    33% { transform: translateY(-15px) translateX(8px) rotate(2deg); }
+    66% { transform: translateY(-8px) translateX(-6px) rotate(-1deg); }
+  }
+  
+  @keyframes float-fast {
+    0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+    50% { transform: translateY(-20px) translateX(10px) scale(1.05); }
+  }
+  
+  @keyframes glow {
+    0% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    100% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6), 0 0 60px rgba(147, 51, 234, 0.3); }
+  }
+  
+  /* Force animations to work - Increased Speed */
+  .animate-float {
+    animation: float 3s ease-in-out infinite !important;
+    animation-play-state: running !important;
+  }
+  
+  .animate-float-slow {
+    animation: float-slow 4s ease-in-out infinite !important;
+    animation-play-state: running !important;
+  }
+  
+  .animate-float-fast {
+    animation: float-fast 2s ease-in-out infinite !important;
+    animation-play-state: running !important;
+  }
+  
+  .animate-glow {
+    animation: glow 1.5s ease-in-out infinite alternate !important;
+    animation-play-state: running !important;
+  }
+  
+  /* Ensure all animations are running */
+  [class*="animate-"] {
+    animation-play-state: running !important;
+  }
+  
   /* Performance optimizations for animations */
   .animate-float,
   .animate-float-slow,
   .animate-float-fast,
   .animate-glow,
-  .animate-drift {
+  .animate-drift,
+  .animate-pulse,
+  .animate-spin,
+  .animate-ping,
+  .animate-bounce {
     will-change: transform;
     backface-visibility: hidden;
     transform: translateZ(0);
   }
   
-  /* Reduce animations on mobile for better performance */
+  /* Keep animations working even with reduced motion preference */
   @media (prefers-reduced-motion: reduce) {
     .animate-float,
     .animate-float-slow,
@@ -166,7 +227,9 @@ All colors MUST be HSL.
     .animate-pulse,
     .animate-spin,
     .animate-ping {
-      animation: none !important;
+      /* Keep animations but make them slower and more subtle */
+      animation-duration: 12s !important;
+      animation-timing-function: ease-in-out !important;
     }
   }
   
@@ -177,5 +240,40 @@ All colors MUST be HSL.
     .animate-float-fast {
       animation-duration: 8s !important;
     }
+  }
+  
+  /* Fix text rendering and prevent cutoff */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2 !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    white-space: normal !important;
+  }
+  
+  p {
+    line-height: 1.6 !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+  }
+  
+  /* Ensure proper text display */
+  .bg-clip-text {
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-fill-color: transparent !important;
+  }
+
+  /* Navigation text color fixes */
+  nav a {
+    color: #4b5563 !important;
+  }
+  
+  nav a:hover {
+    color: #3b82f6 !important;
+  }
+  
+  nav a.active {
+    color: #374151 !important;
   }
 }

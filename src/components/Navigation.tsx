@@ -39,7 +39,7 @@ const Navigation = () => {
               <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg shadow-lg">
                 <GraduationCap className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-foreground">Prolearn</span>
+              <span className="text-lg font-bold text-foreground">Prolearn</span>
             </div>
           </Link>
 
@@ -51,10 +51,10 @@ const Navigation = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className={`transition-colors duration-200 font-bold ${
+                  className={`transition-colors duration-200 font-bold text-sm ${
                     isActive 
-                      ? "text-primary bg-primary/10 px-3 py-2 rounded-lg" 
-                      : "text-muted-foreground hover:text-primary"
+                      ? "text-gray-600 bg-primary/10 px-3 py-2 rounded-lg" 
+                      : "text-gray-600 hover:text-primary"
                   }`}
                 >
                   {link.label}
@@ -65,8 +65,8 @@ const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button className="bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold transition-all duration-200 hover:scale-105">Sign In</Button>
-            <Button variant="hero" className="hover:scale-105 transition-transform duration-200">Get Started</Button>
+            <Button className="bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
+            <Button variant="hero" className="font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,10 +88,10 @@ const Navigation = () => {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className={`px-4 py-2 rounded-md transition-colors font-bold ${
+                    className={`px-4 py-2 rounded-md transition-colors font-bold text-sm ${
                       isActive 
-                        ? "text-primary bg-primary/10" 
-                        : "text-muted-foreground hover:text-primary hover:bg-muted"
+                        ? "text-gray-600 bg-primary/10" 
+                        : "text-gray-600 hover:text-primary hover:bg-muted"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -100,8 +100,8 @@ const Navigation = () => {
                 );
               })}
               <div className="flex flex-col gap-2 px-4 pt-4 border-t border-border">
-                <Button className="w-full bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold transition-all duration-200 hover:scale-105">Sign In</Button>
-                <Button variant="hero" className="w-full hover:scale-105 transition-transform duration-200">Get Started</Button>
+                <Button className="w-full bg-orange-200 text-orange-600 hover:bg-orange-300 hover:text-orange-700 font-bold text-sm transition-all duration-200 hover:scale-105">Sign In</Button>
+                <Button variant="hero" className="w-full font-bold text-sm hover:scale-105 transition-transform duration-200">Get Started</Button>
               </div>
             </div>
           </div>
