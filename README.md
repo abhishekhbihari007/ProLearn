@@ -109,12 +109,6 @@ The application can be deployed to any static hosting service:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
-
-- **Email**: prolearntraininginstitute@gmail.com
-- **Phone**: +91 98765 43210
-- **Office**: Tech Park, Sector 5, Gurgaon, Haryana 122001
-
 ## 🙏 Acknowledgments
 
 - Built with modern web technologies
